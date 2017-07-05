@@ -1,0 +1,43 @@
+<?php
+/**
+ * The template for displaying the footer
+ *
+ * Contains the closing of the #content div and all content after.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package airporttransfer
+ */
+
+?>
+
+	<footer class="footer">
+        <div class="inner">
+        	<div class="footer-container">
+	        	<div class="copyright"><p>Guanacaste viajes © 2017</p><p class="avotz">Desarrollado por <a href="http://avotz.com" target="_blank"><i class="icon-avotz"></i></a></p>
+	                <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=SfhxEla2LlXOtSRrRy4MxCTCLdcbWU1teGmbuzj3igJ88v7tKMNen9YEmMFj"></script></span>
+	                <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/cc-badges-ppppcmcvdam.png" alt="Pay with PayPal, PayPal Credit or any major credit card" class="credit-logos" />
+	            </div>
+	            <div class="phone-numbers">
+	                <p><strong>USA Phone Number:</strong> +1-404-963-9097 </p><p><strong>Costa Rica:</strong> +011-506-2697-1818 | +011-506-8704-3690</p><br />
+	                <div id="TA_certificateOfExcellence501" class="TA_certificateOfExcellence"><ul id="IpwE3XUB1lOP" class="TA_links jM54Pmu8W"><li id="WpGhLhOy4" class="udUMqg"><a target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g309240-d2102243-Reviews-Guanacaste_Viajes_Tours-Liberia_Province_of_Guanacaste.html"><img src="https://www.tripadvisor.com/img/cdsi/img2/awards/CoE2015_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"/></a></li></ul></div><script src="https://www.jscache.com/wejs?wtype=certificateOfExcellence&uniq=501&locationId=2102243&lang=en_US&year=2015&display_version=2"></script>
+	                <div id="TA_certificateOfExcellence918" class="TA_certificateOfExcellence"><ul id="6KV4jNSJrj" class="TA_links B3GeyqTv1"><li id="wajqJc8nzq" class="4FY0PGBQzdf"><a target="_blank" href="https://www.tripadvisor.co.uk/Attraction_Review-g309240-d2102243-Reviews-Guanacaste_Viajes_Tours-Liberia_Province_of_Guanacaste.html"><img src="https://www.tripadvisor.co.uk/img/cdsi/img2/awards/CoE2016_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"/></a></li></ul></div><script src="https://www.jscache.com/wejs?wtype=certificateOfExcellence&uniq=918&locationId=2102243&lang=en_UK&year=2016&display_version=2"></script>    
+	                <!--<span id="siteseal"><script type="text/javascript" src="https://seal.starfieldtech.com/getSeal?sealID=mq6QnWtPXw00suNUVWLlYvccgxIy24zeNuwFeLjlIohOjHUEuppZUj"></script></span>
+	                </div>-->
+	                
+	              
+	            </div>
+	            <div class="redes"><a href="https://www.facebook.com/GuanacasteViaje" target="_blank">Facebook</a> • <a href="https://twitter.com/guanacasteviaje" target="_blank">Twitter</a> • <a href="https://plus.google.com/b/103229597720510667827/103229597720510667827/about?gmbpt=true&pageId=103229597720510667827&hl=en" target="_blank">Google+</a>
+	            • <a href="https://www.youtube.com/channel/UCOMPdeJl_Ft5VvyfMMu2h3g" target="_blank">Youtube</a>
+	            <a href="#" class="sitelock" onclick="window.open('https://www.sitelock.com/verify.php?site=airporttransfercostarica.com','SiteLock','width=600,height=600,left=160,top=170');" ><img class="img-responsive" alt="SiteLock" title="SiteLock" src="//shield.sitelock.com/shield/airporttransfercostarica.com" /></a>
+	            </div>
+        	</div>
+           
+            
+        </div>
+        <em class="border-colors"></em>
+    </footer>
+<?php wp_footer(); ?>
+
+</body>
+</html>
