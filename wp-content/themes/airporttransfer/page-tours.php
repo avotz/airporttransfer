@@ -1,0 +1,210 @@
+<?php
+/**
+ * The template for displaying all pages
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ * Template Name: Page Tours 
+ * @package airporttransfer
+ */
+$categories = get_terms( array(
+            'taxonomy' => 'product_cat',
+            'hide_empty' => false
+            
+        ) );
+
+$locations = get_terms( array(
+            'taxonomy' => 'location',
+            'hide_empty' => false
+            
+        ) );
+
+$categorySelected = get_query_var('product_cat');
+$locationSelected = get_query_var('location');
+
+
+get_header(); ?>
+	 <section class="main">
+            <em class="border-colors"></em>
+             <div class="inner">
+                <?php
+				while ( have_posts() ) : the_post();
+
+					get_template_part( 'template-parts/content', 'page' );
+
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+
+				endwhile; // End of the loop.
+				?>
+				<div class="tours-filters">
+					<form method="get" action="/tours/?product_cat=<?php echo $categorySelected ?>&location=<?php echo $locationSelected ?>" class="form-filters-tour">
+						<div class="form-filters-tour-item">
+							<select name="product_cat" id="product_cat" style="width: 100%">
+							    <option value=""></option>
+								<?php foreach ($categories as $cat) : ?>
+									<option value="<?php echo $cat->slug ?>" <?php if($categorySelected == $cat->slug ) echo 'selected' ?> ><?php echo $cat->name ?></option>
+								<?php endforeach; ?>
+							</select>
+						</div>
+						<div class="form-filters-tour-item">
+							<select name="location" id="location" style="width: 100%">
+							     <option value=""></option>
+								<?php foreach ($locations as $loc) : ?>
+									<option value="<?php echo $loc->slug ?>" <?php if($locationSelected == $loc->slug ) echo 'selected' ?> ><?php echo $loc->name ?></option>
+								<?php endforeach; ?>
+							</select>
+						</div>
+					</form>
+					
+				</div>
+				 <div class="tours-items">
+            	
+            
+	            <?php
+                    
+	                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+	                if($categorySelected && $locationSelected){
+		                $args = array(
+		                  'post_type' => 'product',
+		                  //'order' => 'ASC',
+		                  'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
+		                  'posts_per_page' => 12,
+		                   'paged' => $paged,
+		                   'tax_query' => array(
+								'relation' => 'AND',
+				
+								array(
+									'taxonomy' => 'product_cat',
+									'field'    => 'slug',
+									'terms'    => $categorySelected,
+								),
+								array(
+									'taxonomy' => 'location',
+									'field'    => 'slug',
+									'terms'    => $locationSelected,
+									
+								),
+							)
+		                 
+		                );
+		               
+	                }elseif($categorySelected){
+	                	$args = array(
+		                  'post_type' => 'product',
+		                  //'order' => 'ASC',
+		                  'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
+		                  'posts_per_page' => 12,
+		                   'paged' => $paged,
+		                   'tax_query' => array(
+								
+								array(
+									'taxonomy' => 'product_cat',
+									'field'    => 'slug',
+									'terms'    => $categorySelected,
+								),
+								
+							)
+		 
+		                );
+		              
+	                }elseif($locationSelected){
+	                	$args = array(
+		                  'post_type' => 'product',
+		                  //'order' => 'ASC',
+		                  'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
+		                  'posts_per_page' => 12,
+		                   'paged' => $paged,
+		                   'tax_query' => array(
+								
+								array(
+									'taxonomy' => 'location',
+									'field'    => 'slug',
+									'terms'    => $locationSelected,
+								),
+								
+							)
+		 
+		                );
+	                }else{
+	                	$args = array(
+		                  'post_type' => 'product',
+		                  //'order' => 'ASC',
+		                  'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
+		                  'posts_per_page' => 12,
+		                   'paged' => $paged
+		                   
+		                  
+		                );
+	                }
+
+	                $items = new WP_Query( $args );
+	                 // Pagination fix
+	                  $temp_query = $wp_query;
+	                  $wp_query   = NULL;
+	                  $wp_query   = $items;
+	                  
+	                if( $items->have_posts() ) {
+	                  while( $items->have_posts() ) {
+	                     $items->the_post();
+	                   
+	                    ?>
+
+	                      
+	                         <article class="tours-item" >
+	                            <div class="entry-content grid-item">
+	                                <figure class="entry-thumbnail">
+	                                <a href="<?php the_permalink(); ?>">
+	                                     <?php if ( has_post_thumbnail() ) :
+
+	                                          $id = get_post_thumbnail_id($post->ID);
+	                                          $thumb_url = wp_get_attachment_image_src($id,'large', true);
+	                                          ?>
+	                                          
+	                                       
+	                                        
+	                                      <?php endif; ?>
+	                                      <img src="<?php echo $thumb_url[0] ?>"  alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
+	                                  </a>
+	                                </figure>
+	                                <div class="entry-excerpt">
+	                                    <div class="entry-header">
+	                                    <div class="tour-title">
+	                                    
+	                        
+	                                    <h4>
+	                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+	                                    </h4>
+	                                    </div>
+	                                    </div>
+	                                    
+	                                </div>
+	                            </div>
+	                        </article>
+	                    
+	                     
+	                      
+	                    <?php
+	                   
+	                     
+	                  }
+	                }
+	                
+	              ?>
+	              </div>
+	              <?php  the_posts_pagination( array( 'mid_size' => 2 ) ); 
+	                    wp_reset_postdata(); ?>
+            </div>
+        </section>
+	
+
+<?php
+/*get_sidebar();*/
+get_footer();

@@ -14,7 +14,7 @@
 
 get_header(); ?>
 	 <section id="slider">
-        <div class="owl-carousel">
+        <div class="home-slider owl-carousel">
 	  	 
 	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/picture1.jpg');">
 

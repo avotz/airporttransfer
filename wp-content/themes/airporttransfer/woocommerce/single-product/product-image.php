@@ -33,23 +33,30 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	'images',
 ) );
 ?>
-<div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
-	<figure class="woocommerce-product-gallery__wrapper">
-		<?php
-		$attributes = array(
-			'title'                   => get_post_field( 'post_title', $post_thumbnail_id ),
-			'data-caption'            => get_post_field( 'post_excerpt', $post_thumbnail_id ),
-			'data-src'                => $full_size_image[0],
-			'data-large_image'        => $full_size_image[0],
-			'data-large_image_width'  => $full_size_image[1],
-			'data-large_image_height' => $full_size_image[2],
-		);
+<div class="product-header">
+	<div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
+		<figure class="woocommerce-product-gallery__wrapper">
+			<?php
+			$attributes = array(
+				'title'                   => get_post_field( 'post_title', $post_thumbnail_id ),
+				'data-caption'            => get_post_field( 'post_excerpt', $post_thumbnail_id ),
+				'data-src'                => $full_size_image[0],
+				'data-large_image'        => $full_size_image[0],
+				'data-large_image_width'  => $full_size_image[1],
+				'data-large_image_height' => $full_size_image[2],
+			);
 
-		
-		?>
-		<figure class="woocommerce-product-gallery__wrapper tour-banner" style="background-image: url('<?php echo esc_url( $full_size_image[0] ) ?>');">
 			
-		</figure> 
-	</figure>
-</div>
+			?>
+			<figure class="woocommerce-product-gallery__wrapper tour-banner" style="background-image: url('<?php echo esc_url( $full_size_image[0] ) ?>');">
+				
+			</figure> 
+		</figure>
+		
+	</div>
 
+	<div id="slider-gallery" class="slider-gallery owl-carousel">
+		<?php do_action( 'woocommerce_product_thumbnails' ); ?>
+	</div>
+    <?php woocommerce_get_template( 'single-product/title.php' ); ?>
+</div>

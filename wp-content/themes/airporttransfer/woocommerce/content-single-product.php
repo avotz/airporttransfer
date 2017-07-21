@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="product-header">
+	
 		<?php
 		/**
 		 * woocommerce_before_single_product_summary hook.
@@ -48,10 +48,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 */
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
-	</div>
+
+		
 	
 
-	<div class="summary entry-summary inner">
+    
+	<div class="summary entry-summary">
 		
 			
 		
@@ -70,12 +72,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 			 */
 			do_action( 'woocommerce_single_product_summary' );
 		?>
-		<div class="masonry-gallery">
-			
-			<?php do_action( 'woocommerce_product_thumbnails' ); ?>
-		</div>
+		
 	</div><!-- .summary -->
-
+     <div class="clear"></div>
 	<?php
 		/**
 		 * woocommerce_after_single_product_summary hook.

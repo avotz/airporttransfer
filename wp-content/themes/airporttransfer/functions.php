@@ -42,7 +42,8 @@ function airporttransfer_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'tour-gallery', 1920, 1080, true );
-
+    //add_image_size( 'tour-slider-gallery', 256, 150, true );
+    add_image_size( 'tour-slider-gallery', 512, 300, true );
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'header' => esc_html__( 'Header', 'airporttransfer' ),

@@ -37,6 +37,22 @@
         </div>
         <em class="border-colors"></em>
     </footer>
+
+     <div id="tour-popup" class="request-popup white-popup mfp-hide mfp-with-anim">
+        <h2>Inquire for Tour</h2>
+         <?php  echo do_shortcode('[contact-form-7 id="90" title="Contact Tour"]') ;?>
+              
+        
+    </div>
+     <!-- booking -->
+    <div class="request-popup white-popup mfp-hide mfp-with-anim" id="transfer-popup">
+        <div id='bro_reservation'></div>
+        <input type='hidden' id='cid' value='AOKdZADhufaic11ZFe5UWg%3d%3d' />
+        <input type='hidden' id='dbaid' value='PW5zWkTv9KRUJHxtYK4OKQ%3d%3d' /> 
+        <script type='text/javascript'>
+         (function () { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://bookridesonline.com/web/reservation.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })(); 
+         </script>
+    </div>
 <?php wp_footer(); ?>
 
 </body>

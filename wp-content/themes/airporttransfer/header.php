@@ -55,8 +55,10 @@
 	          ); 
 	          ?>
             <a href="#" class="btn-menu"><i class="icon-menu"></i></a>
-
-            
+            <div class="relative">
+                
+            <a href="#transfer-popup" class="btn-budget transfer-popup-link"><i class="icon-book"></i>Book Transfer </a>
+            </div>
         </div>
     </section>
 </header>

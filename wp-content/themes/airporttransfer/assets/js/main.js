@@ -10,13 +10,17 @@
            
         });
    
-    $('.woocommerce-product-gallery__image a').magnificPopup({
-      type: 'image',
-      gallery:{
+  
+   $('.slider-gallery').magnificPopup({
+    delegate: '.woocommerce-product-gallery__image a', // child items selector, by clicking on it popup will open
+    type: 'image',
+    gallery:{
         enabled:true
       }
-    });
-
+    
+  });
+   
+  
       
        btnMenu.on('click', function(){
             menu.toggle();
@@ -42,6 +46,23 @@
         },
     });
        $('select').select2();
+       $('select[name="product_cat"]').select2({
+         placeholder: 'Category',
+         allowClear: true
+
+       });
+       $('select[name="location"]').select2({
+         placeholder: 'Location',
+         allowClear: true
+       });
+         var formFiltersTour = $('.form-filters-tour');
+        $('select[name="location"]').change(function (e) {
+            
+             formFiltersTour.submit();
+        })
+         $('select[name="product_cat"]').change(function (e) {
+             formFiltersTour.submit();
+        })
 
     // SMOOTH ANCHOR SCROLLING
     var $root = $('html, body');
@@ -206,10 +227,29 @@
             .slideUp(200);*/
 
     });
-
-    $(".owl-carousel").owlCarousel({
+   
+  
+    $(".home-slider").owlCarousel({
       animateOut: 'fadeOut',
       items : 1,
+      autoplay : true,
+      autoplayTimeout: 5000,
+      loop : true,
+      nav : true,
+      navText : ['','']
+      /*onChange : function (e) {
+        console.log(e.target);
+        $('.owl-item.active span').addClass('animated');
+        $('.owl-item.active h1').addClass('animated');
+      }*/
+      /*slideSpeed : 300,
+      paginationSpeed : 400,*/
+      /*singleItem:true*/
+  });
+
+     $(".slider-gallery ").owlCarousel({
+      animateOut: 'fadeOut',
+      items : 5,
       autoplay : true,
       autoplayTimeout: 5000,
       loop : true,
@@ -246,7 +286,7 @@
        
     });
 
-      $('.accommodation-popup-link').magnificPopup({
+      $('.transfer-popup-link').magnificPopup({
         type: 'inline',
         midClick: true,
         removalDelay: 500, //delay removal by X to allow out-animation
@@ -306,9 +346,9 @@
     $('.tour-popup-link').on('click',function (e) {
       
     
-      //console.log($(this).data('activitie'))
-      //$('#tour-popup').find('select[name="tour[]"] option[value="'+ $(this).attr('data-title') +'"]').attr("selected",true).change();
-      $('#tour-popup').find('select[name="tours[]"] option[value="'+ $(this).attr('data-title') +'"]').attr("selected",true).change();
+    
+      //$('#tour-popup').find('select[name="tours[]"] option[value="'+ $(this).attr('data-title') +'"]').attr("selected",true).change();
+      $('#tour-popup').find('input[name="your-subject"]').val('Inquire for '+$(this).attr('data-title'));
       
       console.log($('#tour-popup').find('select[name="tours[]"] option[value="'+ $(this).attr('data-title') +'"]'))
       
