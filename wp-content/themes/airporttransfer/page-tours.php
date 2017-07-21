@@ -44,7 +44,7 @@ get_header(); ?>
 				endwhile; // End of the loop.
 				?>
 				<div class="tours-filters">
-					<form method="get" action="/tours/?product_cat=<?php echo $categorySelected ?>&location=<?php echo $locationSelected ?>" class="form-filters-tour">
+					<form method="get" action="<?php echo esc_url( home_url( '/tours/?product_cat='. $categorySelected .'&location='. $locationSelected ) ); ?>" class="form-filters-tour">
 						<div class="form-filters-tour-item">
 							<select name="product_cat" id="product_cat" style="width: 100%">
 							    <option value=""></option>
