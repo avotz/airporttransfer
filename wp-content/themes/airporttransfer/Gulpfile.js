@@ -45,7 +45,7 @@ gulp.task('js', function () {
     ])
     //.pipe(browserify())
     .pipe(uglify({ compress: true }))
-    //.pipe(stripDebug())
+    .pipe(stripDebug())
     .pipe(concat('bundle.js'))
     .pipe(gulp.dest('./js'))
     .pipe(reload({stream:true}));

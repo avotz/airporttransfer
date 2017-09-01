@@ -45,19 +45,23 @@ get_header(); ?>
 				?>
 				<div class="tours-filters">
 					<form method="get" action="<?php echo esc_url( home_url( '/tours/?product_cat='. $categorySelected .'&location='. $locationSelected ) ); ?>" class="form-filters-tour">
+						
 						<div class="form-filters-tour-item">
-							<select name="product_cat" id="product_cat" style="width: 100%">
-							    <option value=""></option>
-								<?php foreach ($categories as $cat) : ?>
-									<option value="<?php echo $cat->slug ?>" <?php if($categorySelected == $cat->slug ) echo 'selected' ?> ><?php echo $cat->name ?></option>
-								<?php endforeach; ?>
-							</select>
-						</div>
-						<div class="form-filters-tour-item">
+						    <label for="location">Where you staying
+?</label>
 							<select name="location" id="location" style="width: 100%">
 							     <option value=""></option>
 								<?php foreach ($locations as $loc) : ?>
 									<option value="<?php echo $loc->slug ?>" <?php if($locationSelected == $loc->slug ) echo 'selected' ?> ><?php echo $loc->name ?></option>
+								<?php endforeach; ?>
+							</select>
+						</div>
+						<div class="form-filters-tour-item">
+						<label for="location">Choose your type of adventure</label>
+							<select name="product_cat" id="product_cat" style="width: 100%">
+							    <option value=""></option>
+								<?php foreach ($categories as $cat) : ?>
+									<option value="<?php echo $cat->slug ?>" <?php if($categorySelected == $cat->slug ) echo 'selected' ?> ><?php echo $cat->name ?></option>
 								<?php endforeach; ?>
 							</select>
 						</div>
@@ -174,6 +178,25 @@ get_header(); ?>
 	                                      <img src="<?php echo $thumb_url[0] ?>"  alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
 	                                  </a>
 	                                </figure>
+									<div class="price">
+									<span>From 
+                                       <?php 
+                                      
+                                        $currency = get_woocommerce_currency_symbol();
+
+                                       $product = new WC_Product( $post->ID ); 
+                                     /*echo $product->get_price_html();
+                                      
+                                     woocommerce_template_loop_price(); */
+                                      echo $currency;
+                                      
+                                      if(get_post_meta( get_the_ID(), '_wc_display_cost', true ))
+                                        echo get_post_meta( get_the_ID(), '_wc_display_cost', true );
+                                      else 
+                                        echo get_post_meta( get_the_ID(), '_wc_booking_cost', true )
+                                      // echo word_count(get_the_excerpt(), '24'); ?>
+                                      </span>
+									</div>
 	                                <div class="entry-excerpt">
 	                                    <div class="entry-header">
 	                                    <div class="tour-title">

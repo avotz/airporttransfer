@@ -188,3 +188,9 @@ require get_template_directory() . '/inc/jetpack.php';
  * Implement the Woocommerce.
  */
 require get_template_directory() . '/inc/wc.php';
+
+
+/**
+ * Implement the CPT.
+ */
+ require get_template_directory() . '/inc/cpt.php';

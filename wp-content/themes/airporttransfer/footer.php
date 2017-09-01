@@ -20,8 +20,9 @@
 	            </div>
 	            <div class="phone-numbers">
 	                <p><strong>USA Phone Number:</strong> +1-404-963-9097 </p><p><strong>Costa Rica:</strong> +011-506-2697-1818 | +011-506-8704-3690</p><br />
-	                <div id="TA_certificateOfExcellence501" class="TA_certificateOfExcellence"><ul id="IpwE3XUB1lOP" class="TA_links jM54Pmu8W"><li id="WpGhLhOy4" class="udUMqg"><a target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g309240-d2102243-Reviews-Guanacaste_Viajes_Tours-Liberia_Province_of_Guanacaste.html"><img src="https://www.tripadvisor.com/img/cdsi/img2/awards/CoE2015_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"/></a></li></ul></div><script src="https://www.jscache.com/wejs?wtype=certificateOfExcellence&uniq=501&locationId=2102243&lang=en_US&year=2015&display_version=2"></script>
-	                <div id="TA_certificateOfExcellence918" class="TA_certificateOfExcellence"><ul id="6KV4jNSJrj" class="TA_links B3GeyqTv1"><li id="wajqJc8nzq" class="4FY0PGBQzdf"><a target="_blank" href="https://www.tripadvisor.co.uk/Attraction_Review-g309240-d2102243-Reviews-Guanacaste_Viajes_Tours-Liberia_Province_of_Guanacaste.html"><img src="https://www.tripadvisor.co.uk/img/cdsi/img2/awards/CoE2016_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"/></a></li></ul></div><script src="https://www.jscache.com/wejs?wtype=certificateOfExcellence&uniq=918&locationId=2102243&lang=en_UK&year=2016&display_version=2"></script>    
+	                <!-- <div id="TA_certificateOfExcellence501" class="TA_certificateOfExcellence"><ul id="IpwE3XUB1lOP" class="TA_links jM54Pmu8W"><li id="WpGhLhOy4" class="udUMqg"><a target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g309240-d2102243-Reviews-Guanacaste_Viajes_Tours-Liberia_Province_of_Guanacaste.html"><img src="https://www.tripadvisor.com/img/cdsi/img2/awards/CoE2015_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"/></a></li></ul></div><script src="https://www.jscache.com/wejs?wtype=certificateOfExcellence&uniq=501&locationId=2102243&lang=en_US&year=2015&display_version=2"></script> -->
+	                <div id="TA_certificateOfExcellence918" class="TA_certificateOfExcellence"><ul id="6KV4jNSJrj" class="TA_links B3GeyqTv1"><li id="wajqJc8nzq" class="4FY0PGBQzdf"><a target="_blank" href="https://www.tripadvisor.co.uk/Attraction_Review-g309240-d2102243-Reviews-Guanacaste_Viajes_Tours-Liberia_Province_of_Guanacaste.html"><img src="https://www.tripadvisor.co.uk/img/cdsi/img2/awards/CoE2016_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"/></a></li></ul></div><script src="https://www.jscache.com/wejs?wtype=certificateOfExcellence&uniq=918&locationId=2102243&lang=en_UK&year=2016&display_version=2"></script>
+                    <div id="TA_certificateOfExcellence983" class="TA_certificateOfExcellence"><ul id="aRAz22zP" class="TA_links QZTzOruy7Dgo"><li id="G45DorwWaqw" class="sEXjfr4m6"><a target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g309240-d2102243-Reviews-Guanacaste_Viajes_Tours-Liberia_Province_of_Guanacaste.html"><img src="https://www.tripadvisor.com/img/cdsi/img2/awards/CoE2017_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"/></a></li></ul></div><script src="https://www.jscache.com/wejs?wtype=certificateOfExcellence&uniq=983&locationId=2102243&lang=en_US&year=2017&display_version=2"></script>    
 	                <!--<span id="siteseal"><script type="text/javascript" src="https://seal.starfieldtech.com/getSeal?sealID=mq6QnWtPXw00suNUVWLlYvccgxIy24zeNuwFeLjlIohOjHUEuppZUj"></script></span>
 	                </div>-->
 	                
@@ -40,6 +41,12 @@
 
      <div id="tour-popup" class="request-popup white-popup mfp-hide mfp-with-anim">
         <h2>Inquire for Tour</h2>
+         <?php  echo do_shortcode('[contact-form-7 id="90" title="Contact Tour"]') ;?>
+              
+        
+    </div>
+	<div id="hotel-popup" class="request-popup white-popup mfp-hide mfp-with-anim">
+        <h2>Inquire for hotel</h2>
          <?php  echo do_shortcode('[contact-form-7 id="90" title="Contact Tour"]') ;?>
               
         

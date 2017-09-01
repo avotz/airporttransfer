@@ -1653,6 +1653,7 @@ li.highlighted {
 .tours-item {
   width: 100%;
   margin-bottom: 1rem;
+  position: relative;
 }
 .tours-item img {
   display: block;
@@ -1684,6 +1685,14 @@ li.highlighted {
 .tours-item .entry-content {
   padding: 0;
   background-color: transparent;
+}
+.tours-item .price {
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  background: #eeae11;
+  color: #fff;
+  padding: 0.2rem 1rem;
 }
 .tours-item .entry-excerpt {
   background-color: #9c6;
@@ -2207,4 +2216,75 @@ li.highlighted {
 .pagination .nav-links span.current,
 .pagination .nav-links a.current {
   background-color: #9c6;
+}
+.product-header .main-hotel-photo {
+  width: 100%;
+}
+.product-header .main-hotel-photo-figure div {
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 82vh;
+}
+.product-header .product_title {
+  display: block;
+  padding: 1.5rem;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  font-weight: 500;
+}
+@media screen and (min-width: 1000px) {
+  .product-header .product_title {
+    font-size: 1.5rem;
+  }
+}
+.hotel-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+.hotel-content-main {
+  width: 100%;
+}
+.hotel-content-sidebar {
+  width: 100%;
+}
+.hotel-content a {
+  display: block;
+  text-align: center;
+}
+.hotel-content .tripadvisor {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .hotel-content-main {
+    width: 55%;
+  }
+  .hotel-content-sidebar {
+    width: 30%;
+    border-left: 1px solid #c3c3c3;
+    padding-left: 2rem;
+  }
 }

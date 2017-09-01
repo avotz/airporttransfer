@@ -719,6 +719,7 @@ li.highlighted
 	&-item 
 		width 100%
 		margin-bottom 1rem
+		position: relative
 		img 
 			display block
 			height 190px //240px
@@ -743,6 +744,13 @@ li.highlighted
 		.entry-content
 			padding 0
 			background-color transparent
+		.price 
+			position: absolute
+			top 0
+			z-index: 99
+			background: $naranja
+			color white
+			padding: .2rem 1rem
 		.entry-excerpt
 			background-color $verde
 			color white
@@ -1081,3 +1089,52 @@ li.highlighted
 				background-color #000
 			&.current
 				background-color $verde
+.product-header // hotel
+	.main-hotel-photo
+		width: 100%
+		&-figure
+			div 
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: 50% 50%;
+				height: 82vh;
+	.product_title
+		display: block;
+		padding: 1.5rem;
+		color: #fff;
+		font-size: 1rem;
+		line-height: 1.5rem;
+		text-align: center;
+		text-transform: uppercase;
+		width: 100%;
+		font-weight: 500
+		
+@media screen and (min-width:1000px)
+	.product-header
+		.product_title
+			font-size 1.5rem
+
+.hotel-content
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	padding-bottom: 2rem
+	&-main
+		width: 100%
+	&-sidebar
+		width: 100%
+		
+	a
+		display: block
+		text-align: center;
+	.tripadvisor
+		margin-top: 1rem
+
+@media screen and (min-width:768px)
+	.hotel-content
+		&-main
+			width: 55%
+		&-sidebar
+			width: 30%
+			border-left: 1px solid #c3c3c3;
+			padding-left: 2rem;

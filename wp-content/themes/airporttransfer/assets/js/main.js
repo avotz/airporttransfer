@@ -285,6 +285,26 @@
 
        
     });
+    $('.hotel-popup-link').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        removalDelay: 500, //delay removal by X to allow out-animation
+        callbacks: {
+            beforeOpen: function() {
+
+                this.st.mainClass = 'mfp-zoom-out';
+                $('body').addClass('mfp-open');
+            },
+            beforeClose: function() {
+
+               
+                $('body').removeClass('mfp-open');
+            }
+
+        }
+
+       
+    });
 
       $('.transfer-popup-link').magnificPopup({
         type: 'inline',
@@ -307,41 +327,41 @@
        
     });
 
-     fillSelectTour();
+//      fillSelectTour();
 
-  function fillSelectTour(){
+//   function fillSelectTour(){
          
         
-          $.ajax({
-                type: 'GET',
-                url: '/greengo/api/taxonomy/get_taxonomy_posts/?taxonomy=product_cat&slug=tour&count=-1',//'/api/get_posts/?post_type=product&count=-1',
+//           $.ajax({
+//                 type: 'GET',
+//                 url: '/greengo/api/taxonomy/get_taxonomy_posts/?taxonomy=product_cat&slug=tour&count=-1',//'/api/get_posts/?post_type=product&count=-1',
                 
-                success: function(data){
-                    console.log(data)
+//                 success: function(data){
+//                     console.log(data)
 
-                    var items = [];
+//                     var items = [];
 
-                var select = $('select[name="tours[]"]').empty();
-                $.each(data.posts, function(i,item) {
-                  select.append( '<option value="'
-                                       + $.trim(item.slug) + '">'
-                                       + item.title
-                                       + '</option>' ); 
+//                 var select = $('select[name="tours[]"]').empty();
+//                 $.each(data.posts, function(i,item) {
+//                   select.append( '<option value="'
+//                                        + $.trim(item.slug) + '">'
+//                                        + item.title
+//                                        + '</option>' ); 
 
 
            
-                });
+//                 });
           
 
-                //select.prepend('<option value="" selected><span style="color:red;">--</span></option>');
+//                 //select.prepend('<option value="" selected><span style="color:red;">--</span></option>');
                     
-                },
-                error:function(){
-                    console.log('error cargando los tours')
-                }
-            });
+//                 },
+//                 error:function(){
+//                     console.log('error cargando los tours')
+//                 }
+//             });
           
-    }
+//     }
 
     $('.tour-popup-link').on('click',function (e) {
       
@@ -355,52 +375,19 @@
 
       });
 
-     fillSelectAccommodation();
-
-  function fillSelectAccommodation(){
-         
-        
-          $.ajax({
-                type: 'GET',
-                url: '/greengo/api/taxonomy/get_taxonomy_posts/?taxonomy=product_cat&slug=luxury-accommodation&count=-1',//'/api/get_post/?id='+ post_id +'&post_type=tour',
-                
-                success: function(data){
-                    console.log(data)
-
-                    var items = [];
-
-                var select = $('select[name="accommodations[]"]').empty();
-                $.each(data.posts, function(i,item) {
-                  select.append( '<option value="'
-                                       + $.trim(item.slug) + '">'
-                                       + item.title
-                                       + '</option>' ); 
-
-
-           
-                });
-          
-
-                //select.prepend('<option value="" selected><span style="color:red;">--</span></option>');
-                    
-                },
-                error:function(){
-                    console.log('error cargando los accommodations')
-                }
-            });
-          
-    }
-
-     $('.accommodation-popup-link').on('click',function (e) {
-      
     
-      //console.log($(this).data('activitie'))
-      //$('#tour-popup').find('select[name="tour[]"] option[value="'+ $(this).attr('data-title') +'"]').attr("selected",true).change();
-      $('#accommodation-popup').find('select[name="accommodations[]"] option[value="'+ $(this).attr('data-title') +'"]').attr("selected",true).change();
-      
-   
 
-      });
+      $('.hotel-popup-link').on('click',function (e) {
+        
+       
+      
+        //$('#tour-popup').find('select[name="tours[]"] option[value="'+ $(this).attr('data-title') +'"]').attr("selected",true).change();
+        $('#hotel-popup').find('input[name="your-subject"]').val('Inquire for '+$(this).attr('data-title'));
+        
+        
+        
+  
+        });
 
 
 
