@@ -44,7 +44,7 @@ if($category->parent == 0){
       
       </a>
        <?php if ( $product->id == 210 ) : ?>  <!-- Catamaran -->
-       <script src="https://fareharbor.com/integrations/ics/guanacasteviajes/calendar/?token=cae38b1d-7e12-4f64-b17b-d250103a72fd"></script>
+       <script src="https://fareharbor.com/embeds/script/calendar/marlindelrey/?fallback=simple&ref=website%20booking&asn=guanacasteviajes"></script>
 
       <?php endif; ?>
 	
