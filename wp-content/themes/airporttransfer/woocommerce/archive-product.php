@@ -19,143 +19,210 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
+$categories = get_terms( array(
+	'taxonomy' => 'product_cat',
+	'hide_empty' => false
+	
+) );
 
-get_header( 'shop' ); ?>
-	<section class="intro intro-page">
-               
-                    <!-- <article class="intro__content">
-                        <h2 class="intro__subtitle wow fadeInLeft">Explore Buggy tours</h2>
-                        <h1 class="intro__title wow fadeInRight">YOUR DREAM DESTINATION AWAITS</h1>
+$locations = get_terms( array(
+	'taxonomy' => 'location',
+	'hide_empty' => false
+	
+) );
 
-                    </article> -->
-                     <?php if ( has_post_thumbnail() ) :
+$categorySelected = get_query_var('product_cat');
+$locationSelected = get_query_var('location');
 
-					  	 	$id = get_post_thumbnail_id($post->ID);
-					  	 	$thumb_url = wp_get_attachment_image_src($id,'full', true);
-					  	 	?>
-					    	
-							<div class="item" style="background-image: url('<?php echo $thumb_url[0] ?>');">
-					  	  		
-					  	  	</div>
-							
-						<?php else : ?>
-					  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/intro.jpg');">
-					  	  		
-					  	  </div>
-					  	 
-					  	<?php endif; ?>
-                   
-               
 
-             
-
-       </section>
-	 <section class="main">
-        <div class="inner">
-	<?php
-		/**
-		 * woocommerce_before_main_content hook.
-		 *
-		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20
-		 * @hooked WC_Structured_Data::generate_website_data() - 30
-		 */
-		do_action( 'woocommerce_before_main_content' );
-	?>
-
-    <header class="woocommerce-products-header">
-
-		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-
-			<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
-
-		<?php endif; ?>
-
+get_header('shop'); ?>
+<section class="main">
+	<em class="border-colors"></em>
+	 <div class="inner">
+		<header class="entry-header">
+			<h1 class="entry-title-archive">Tours</h1>
+		</header><!-- .entry-header -->
+		<div class="tours-filters">
+			<form method="get" action="<?php echo esc_url( home_url( '/tours/?product_cat='. $categorySelected .'&location='. $locationSelected ) ); ?>" class="form-filters-tour">
+				
+				<div class="form-filters-tour-item">
+					<label for="location">Where you staying
+?</label>
+					<select name="location" id="location" style="width: 100%">
+						 <option value=""></option>
+						<?php foreach ($locations as $loc) : ?>
+							<option value="<?php echo $loc->slug ?>" <?php if($locationSelected == $loc->slug ) echo 'selected' ?> ><?php echo $loc->name ?></option>
+						<?php endforeach; ?>
+					</select>
+				</div>
+				<div class="form-filters-tour-item">
+				<label for="location">Choose your type of adventure</label>
+					<select name="product_cat" id="product_cat" style="width: 100%">
+						<option value=""></option>
+						<?php foreach ($categories as $cat) : ?>
+							<option value="<?php echo $cat->slug ?>" <?php if($categorySelected == $cat->slug ) echo 'selected' ?> ><?php echo $cat->name ?></option>
+						<?php endforeach; ?>
+					</select>
+				</div>
+			</form>
+			
+		</div>
+		 <div class="tours-items">
+		
+	
 		<?php
-			/**
-			 * woocommerce_archive_description hook.
-			 *
-			 * @hooked woocommerce_taxonomy_archive_description - 10
-			 * @hooked woocommerce_product_archive_description - 10
-			 */
-			do_action( 'woocommerce_archive_description' );
-		?>
+			
+			 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-    </header>
+			if($categorySelected && $locationSelected){
+				$args = array(
+				  'post_type' => 'product',
+				  //'order' => 'ASC',
+				  'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
+				  'posts_per_page' => 12,
+				   'paged' => $paged,
+				   'tax_query' => array(
+						'relation' => 'AND',
+		
+						array(
+							'taxonomy' => 'product_cat',
+							'field'    => 'slug',
+							'terms'    => $categorySelected,
+						),
+						array(
+							'taxonomy' => 'location',
+							'field'    => 'slug',
+							'terms'    => $locationSelected,
+							
+						),
+					)
+				 
+				);
+			   
+			}elseif($categorySelected){
+				$args = array(
+				  'post_type' => 'product',
+				  //'order' => 'ASC',
+				  'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
+				  'posts_per_page' => 12,
+				   'paged' => $paged,
+				   'tax_query' => array(
+						
+						array(
+							'taxonomy' => 'product_cat',
+							'field'    => 'slug',
+							'terms'    => $categorySelected,
+						),
+						
+					)
+ 
+				);
+			  
+			}elseif($locationSelected){
+				$args = array(
+				  'post_type' => 'product',
+				  //'order' => 'ASC',
+				  'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
+				  'posts_per_page' => 12,
+				   'paged' => $paged,
+				   'tax_query' => array(
+						
+						array(
+							'taxonomy' => 'location',
+							'field'    => 'slug',
+							'terms'    => $locationSelected,
+						),
+						
+					)
+ 
+				);
+			}else{
+				$args = array(
+				  'post_type' => 'product',
+				  //'order' => 'ASC',
+				  'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
+				  'posts_per_page' => 12,
+				   'paged' => $paged
+				   
+				  
+				);
+			}
 
-		<?php if ( have_posts() ) : ?>
+			$items = new WP_Query( $args );
+			 // Pagination fix
+			  $temp_query = $wp_query;
+			  $wp_query   = NULL;
+			  $wp_query   = $items;
+			  
+			if( $items->have_posts() ) {
+			  while( $items->have_posts() ) {
+				 $items->the_post();
+			   
+				?>
 
-			<?php
-				/**
-				 * woocommerce_before_shop_loop hook.
-				 *
-				 * @hooked wc_print_notices - 10
-				 * @hooked woocommerce_result_count - 20
-				 * @hooked woocommerce_catalog_ordering - 30
-				 */
-				do_action( 'woocommerce_before_shop_loop' );
-			?>
+				  
+					 <article class="tours-item" >
+						<div class="entry-content grid-item">
+							<figure class="entry-thumbnail">
+							<a href="<?php the_permalink(); ?>">
+								 <?php if ( has_post_thumbnail() ) :
 
-			<?php woocommerce_product_loop_start(); ?>
+									  $id = get_post_thumbnail_id($post->ID);
+									  $thumb_url = wp_get_attachment_image_src($id,'large', true);
+									  ?>
+									  
+								   
+									
+								  <?php endif; ?>
+								  <img src="<?php echo $thumb_url[0] ?>"  alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
+							  </a>
+							</figure>
+							<div class="price">
+							<span>From 
+							   <?php 
+							  
+								$currency = get_woocommerce_currency_symbol();
 
-				<?php woocommerce_product_subcategories(); ?>
-
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php
-						/**
-						 * woocommerce_shop_loop hook.
-						 *
-						 * @hooked WC_Structured_Data::generate_product_data() - 10
-						 */
-						do_action( 'woocommerce_shop_loop' );
-					?>
-
-					<?php wc_get_template_part( 'content', 'product' ); ?>
-
-				<?php endwhile; // end of the loop. ?>
-
-			<?php woocommerce_product_loop_end(); ?>
-
-			<?php
-				/**
-				 * woocommerce_after_shop_loop hook.
-				 *
-				 * @hooked woocommerce_pagination - 10
-				 */
-				do_action( 'woocommerce_after_shop_loop' );
-			?>
-
-		<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
-
-			<?php
-				/**
-				 * woocommerce_no_products_found hook.
-				 *
-				 * @hooked wc_no_products_found - 10
-				 */
-				do_action( 'woocommerce_no_products_found' );
-			?>
-
-		<?php endif; ?>
-
-	<?php
-		/**
-		 * woocommerce_after_main_content hook.
-		 *
-		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-		 */
-		do_action( 'woocommerce_after_main_content' );
-	?>
-
-	<?php
-		/**
-		 * woocommerce_sidebar hook.
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		//do_action( 'woocommerce_sidebar' );
-	?>
+							   $product = new WC_Product( $post->ID ); 
+							 /*echo $product->get_price_html();
+							  
+							 woocommerce_template_loop_price(); */
+							  echo $currency;
+							  
+							  if(get_post_meta( get_the_ID(), '_wc_display_cost', true ))
+								echo get_post_meta( get_the_ID(), '_wc_display_cost', true );
+							  else 
+								echo get_post_meta( get_the_ID(), '_wc_booking_cost', true )
+							  // echo word_count(get_the_excerpt(), '24'); ?>
+							  </span>
+							</div>
+							<div class="entry-excerpt">
+								<div class="entry-header">
+								<div class="tour-title">
+								
+					
+								<h4>
+								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+								</h4>
+								</div>
+								</div>
+								
+							</div>
+						</div>
+					</article>
+				
+				 
+				  
+				<?php
+			   
+				 
+			  }
+			}
+			
+		  ?>
+		  </div>
+		  <?php  the_posts_pagination( array( 'mid_size' => 2 ) ); 
+				wp_reset_postdata(); ?>
 	</div>
 </section>
 <?php get_footer( 'shop' ); ?>

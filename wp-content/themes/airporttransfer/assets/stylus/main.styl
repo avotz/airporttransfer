@@ -711,6 +711,11 @@ li.highlighted
 .page-template-page-tours
 	.entry-header
 		text-align center
+.post-type-archive-product
+	.entry-header-shop
+		padding-top: 3rem
+		text-align: center;
+
 .tours
 	&-items
 		display flex
@@ -730,7 +735,7 @@ li.highlighted
 			margin-top 0
 			text-align center
 			background-color verde
-			font-size 13px
+			font-size 16px
 			a 
 				color white
 		a 
@@ -783,7 +788,7 @@ li.highlighted
 @media screen and (min-width: 768px)
 	.tours
 		&-item 
-			width 33%
+			width 30%
 		&-filters
 			.form-filters-tour
 				.form-filters-tour-item 
@@ -1058,7 +1063,10 @@ li.highlighted
 		ul 
 			display inline-block
 			vertical-align top
-	
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button
+	background-color: $naranja
+	color white
 .related
 	padding-left 1rem
 	padding-right 1rem
