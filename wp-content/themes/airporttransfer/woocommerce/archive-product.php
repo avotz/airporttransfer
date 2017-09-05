@@ -39,8 +39,8 @@ get_header('shop'); ?>
 <section class="main">
 	<em class="border-colors"></em>
 	 <div class="inner">
-		<header class="entry-header">
-			<h1 class="entry-title-archive">Tours</h1>
+		<header class="entry-header-shop">
+			<h1 class="entry-title">Tours</h1>
 		</header><!-- .entry-header -->
 		<div class="tours-filters">
 			<form method="get" action="<?php echo esc_url( home_url( '/tours/?product_cat='. $categorySelected .'&location='. $locationSelected ) ); ?>" class="form-filters-tour">
