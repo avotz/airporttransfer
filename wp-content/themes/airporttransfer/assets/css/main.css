@@ -1405,7 +1405,7 @@ li.highlighted {
   -moz-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top center;
   height: 30vh;
 }
 #slider img {
