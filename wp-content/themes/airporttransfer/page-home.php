@@ -16,16 +16,16 @@ get_header(); ?>
 	 <section id="slider">
         <div class="home-slider owl-carousel">
 	  	 
-	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/picture1.jpg');">
+	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/Arenal-Volcano.jpg');">
 
 	  	  </div>
-	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/picture2.jpg');">
+	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/Beach-Family.jpg');">
 
 	  	  </div>
-	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/picture3.jpg');">
+	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/Rio-Celeste.jpg');">
 
 	  	  </div>
-	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/picture4.jpg');">
+	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/Sunset-Surfing.jpg');">
 
 	  	  </div>
 	  	  
