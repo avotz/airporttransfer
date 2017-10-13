@@ -19,6 +19,17 @@
       }
     
   });
+
+  if ($('#cupon-popup').length) {
+    $.magnificPopup.open({
+        items: {
+            src: '#cupon-popup' 
+        },
+        type: 'inline',
+        
+    });
+
+}
    
   
       
@@ -192,6 +203,10 @@
           //$('.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
         });
       });
+
+
+       
+
       resizes();
 
     });
