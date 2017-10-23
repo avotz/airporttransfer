@@ -2289,6 +2289,9 @@ li.highlighted {
   display: block;
   text-align: center;
 }
+.hotel-content-sidebar a.btn {
+  color: #fff;
+}
 .hotel-content .tripadvisor {
   margin-top: 1rem;
 }
