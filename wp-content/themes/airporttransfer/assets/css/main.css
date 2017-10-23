@@ -1071,6 +1071,9 @@ li.highlighted {
   max-width: 940px;
   padding: 0 1em;
 }
+.entry-content a {
+  color: #9c6;
+}
 .header {
   padding: 0;
   position: relative;
@@ -2282,7 +2285,7 @@ li.highlighted {
 .hotel-content-sidebar {
   width: 100%;
 }
-.hotel-content a {
+.hotel-content-sidebar a {
   display: block;
   text-align: center;
 }
