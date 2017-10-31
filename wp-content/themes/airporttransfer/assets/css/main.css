@@ -2325,6 +2325,9 @@ li.highlighted {
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
+.blog-container a {
+  color: verde;
+}
 .blog-container a:hover {
   text-decoration: underline;
 }
