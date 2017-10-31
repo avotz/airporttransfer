@@ -7,34 +7,53 @@
  * @package airporttransfer
  */
 
-get_header(); ?>
-
-	<div id="primary" class="content-area">
+get_header(); 
+if ( 'hotel' === get_post_type() ) :
+?>
+<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+			
 
 		<?php
 		while ( have_posts() ) : the_post();
 
-		if ( 'hotel' === get_post_type() ) :
 			get_template_part( 'template-parts/content', 'hotel' );
-		else:
-			get_template_part( 'template-parts/content', get_post_format() );
-
-			the_post_navigation();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-			get_sidebar();
-		endif; 
+		
 
 		endwhile; // End of the loop.
 		?>
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
+</div><!-- #primary -->
+<?php else: ?>
+	<section class="main">
+            <em class="border-colors"></em>
+             <div class="inner">
+					<div class="blog-container">
+							<div class="blog-info">
+									<?php
+									while ( have_posts() ) : the_post();
+			
+										get_template_part( 'template-parts/content', get_post_format() );
+			
+										the_post_navigation();
+			
+										// If comments are open or we have at least one comment, load up the comment template.
+										if ( comments_open() || get_comments_number() ) :
+											comments_template();
+										endif;
+			
+									endwhile; // End of the loop.
+									?>
+							</div>
+							<div class="blog-sidebar">
+								<?php get_sidebar(); ?>
+							</div>
+						</div>
+            </div>
+        </section>
 
+	
 <?php
 
 get_footer();

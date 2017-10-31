@@ -1150,3 +1150,87 @@ li.highlighted
 			width: 30%
 			border-left: 1px solid #c3c3c3;
 			padding-left: 2rem;
+
+.blog
+	&-container 
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		a 
+			&:hover
+				text-decoration underline
+		
+	&-info 
+	&-sidebar
+		width 100%
+		padding: 2rem 0
+		ul 
+			margin-left 35px 
+	
+		.widget-area
+			.widget
+				margin-bottom 2rem
+				&-title
+					margin-bottom 0
+					color verde
+				
+			.widget_search
+				.screen-reader-text
+				.search-submit
+					display none
+		.post 
+			border-bottom 1px solid #ddd
+			padding-bottom 1rem
+			margin-bottom 1rem
+		.entry-header
+			position relative
+			
+		.entry-meta
+			position absolute
+			bottom 0
+			right 0
+			background rojo
+			color white 
+			padding 0 .5rem
+			a 
+				color white
+		.entry-content
+			margin-top .5rem
+	&-sidebar
+		padding-top: 0
+	&-banner
+		background-size cover 
+		background-position center center
+		background-repeat no-repeat
+		height 30vh
+		position relative
+		a 
+			position absolute
+			left 0
+			right 0
+			top 0
+			bottom 0
+.package
+	&-banner
+		a
+			right auto
+			top auto 
+			left 1rem
+			bottom: 0
+			padding: .2rem 1rem;
+
+.search 
+	.search-submit
+		margin-top 1rem
+	
+@media screen and (min-width:768px)
+	.blog
+		&-container 
+			padding-top 6rem
+		&-info
+			width 70%
+			padding: 2rem 1rem 2rem 4rem; 
+		&-sidebar
+			width 30%
+			border-left 1px solid #ddd
+			padding: 2rem
