@@ -2326,7 +2326,7 @@ li.highlighted {
   justify-content: space-between;
 }
 .blog-container a {
-  color: verde;
+  color: #9c6;
 }
 .blog-container a:hover {
   text-decoration: underline;
