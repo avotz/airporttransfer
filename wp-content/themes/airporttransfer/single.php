@@ -55,5 +55,6 @@ if ( 'hotel' === get_post_type() ) :
 
 	
 <?php
+endif;
 
 get_footer();
