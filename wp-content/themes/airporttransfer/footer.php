@@ -66,7 +66,7 @@
 <script>
  
     var wpcf7ElmInquireTour = document.querySelector( '#tour-popup div.wpcf7' );
-    var wpcf7ElmInquireTransfer = document.querySelector( '.btn-budget' );
+    var wpcf7ElmInquireTransfer = document.querySelector( '.transfer-popup-link' );
     var wpcf7ElmContact = document.querySelector( '#wpcf7-f45-p23-o1' ); //form contact
    
     
