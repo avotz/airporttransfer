@@ -63,5 +63,34 @@
     </div>
 <?php wp_footer(); ?>
 
+<script>
+ 
+    var wpcf7ElmInquireTour = document.querySelector( '#tour-popup div.wpcf7' );
+    var wpcf7ElmInquireTransfer = document.querySelector( '.btn-budget' );
+    var wpcf7ElmContact = document.querySelector( '#wpcf7-f45-p23-o1' ); //form contact
+   
+    
+
+      if(wpcf7ElmContact)
+    {
+          wpcf7ElmContact.addEventListener( 'wpcf7submit', function( event ) {
+            ga('send', 'event', 'Contact Form', 'submit');
+        }, false );
+      }
+       if(wpcf7ElmInquireTour)
+    {
+          wpcf7ElmInquireTour.addEventListener( 'wpcf7submit', function( event ) {
+            ga('send', 'event', 'Inquire Tour Form', 'submit');
+        }, false );
+      }
+        if(wpcf7ElmInquireTransfer)
+    {
+          wpcf7ElmInquireTransfer.addEventListener( 'click', function( event ) {
+            ga('send', 'event', 'Book Transfer Button', 'submit');
+        }, false );
+      }
+     
+</script>
+
 </body>
 </html>
