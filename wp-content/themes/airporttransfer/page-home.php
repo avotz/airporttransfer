@@ -161,10 +161,10 @@ get_header(); ?>
             </div>
         </section>
 
-		<div id="cupon-popup" class="cupon-popup white-popup mfp-hide mfp-with-anim" style="max-width: 490px;">
+		<!-- <div id="cupon-popup" class="cupon-popup white-popup mfp-hide mfp-with-anim" style="max-width: 490px;">
 			<img src="<?php echo get_template_directory_uri();  ?>/img/cupon.png" alt="cupon">
 
-		</div>
+		</div> -->
 	
 <?php
 
