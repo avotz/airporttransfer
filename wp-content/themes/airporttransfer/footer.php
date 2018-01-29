@@ -52,15 +52,19 @@
               
         
     </div>
-     <!-- booking -->
-    <div class="request-popup white-popup mfp-hide mfp-with-anim" id="transfer-popup">
-        <div id='bro_reservation'></div>
-        <input type='hidden' id='cid' value='AOKdZADhufaic11ZFe5UWg%3d%3d' />
-        <input type='hidden' id='dbaid' value='PW5zWkTv9KRUJHxtYK4OKQ%3d%3d' /> 
-        <script type='text/javascript'>
-         (function () { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://bookridesonline.com/web/reservation.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })(); 
-         </script>
-    </div>
+   <?php if ( is_home() ) : ?>
+					<!-- booking -->
+                    <div class="request-popup white-popup mfp-hide mfp-with-anim" id="transfer-popup">
+                        <div id='bro_reservation'></div>
+                        <input type='hidden' id='cid' value='AOKdZADhufaic11ZFe5UWg%3d%3d' />
+                        <input type='hidden' id='dbaid' value='PW5zWkTv9KRUJHxtYK4OKQ%3d%3d' /> 
+                        <script type='text/javascript'>
+                        (function () { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://bookridesonline.com/web/reservation.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })(); 
+                        </script>
+                    </div>
+	<?php
+        endif; ?>
+    
 <?php wp_footer(); ?>
 
 <script>
