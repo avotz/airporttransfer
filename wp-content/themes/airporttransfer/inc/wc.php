@@ -102,7 +102,7 @@ function woo_includes_tab_content()
 
   // The new tab content
 
-    echo '<h2>Includes</h2>';
+  //  echo '<h2>Includes</h2>';
   //echo '<p>Here\'s your new product tab.</p>';
     echo rwmb_meta('rw_includes');
 
@@ -131,7 +131,7 @@ function woo_map_tour_tab_content()
 
   // The new tab content
 
-    echo '<h2>Map Tour</h2>';
+   // echo '<h2>Map Tour</h2>';
   //echo '<p>Here\'s your new product tab.</p>';
     echo rwmb_meta('rw_map_tour');
 
