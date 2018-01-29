@@ -133,8 +133,8 @@ function woo_map_tour_tab_content()
 
    // echo '<h2>Map Tour</h2>';
   //echo '<p>Here\'s your new product tab.</p>';
-    echo rwmb_meta('rw_map_tour');
-
+   // echo rwmb_meta('rw_map_tour');
+    echo do_shortcode(rwmb_meta('rw_map_tour')); // para mostrar shortcode
 }
 
 // Hook in
