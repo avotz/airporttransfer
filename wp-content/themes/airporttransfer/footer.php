@@ -52,7 +52,7 @@
               
         
     </div>
-   <?php if (is_front_page() ) : ?>
+   <?php /*if (is_front_page() ) : */?>
 					<!-- booking -->
                     <div class="request-popup white-popup mfp-hide mfp-with-anim" id="transfer-popup">
                         <div id='bro_reservation'></div>
@@ -62,8 +62,8 @@
                         (function () { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://bookridesonline.com/web/reservation.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })(); 
                         </script>
                     </div>
-	<?php
-        endif; ?>
+	<?php/*
+        endif;*/ ?>
     
 <?php wp_footer(); ?>
 
