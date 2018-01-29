@@ -52,7 +52,7 @@
               
         
     </div>
-   <?php if ( is_home() ) : ?>
+   <?php if ( is_home() && is_front_page() ) : ?>
 					<!-- booking -->
                     <div class="request-popup white-popup mfp-hide mfp-with-anim" id="transfer-popup">
                         <div id='bro_reservation'></div>
