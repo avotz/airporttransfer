@@ -39,6 +39,16 @@ function airporttransfer_register_meta_boxes( $meta_boxes ) {
                 'class' => 'custom-class'
 
             ),
+            array(
+                'name' => 'Map tour',
+                'desc' => 'Map tour',
+                'id' => $prefix . 'map_tour',
+                'type' => 'WYSIWYG',
+                'options' => array('textarea_rows' => 5),
+                'std' => '',
+                'class' => 'custom-class'
+
+            ),
         )
     );
     return $meta_boxes;

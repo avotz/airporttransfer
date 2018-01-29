@@ -108,6 +108,35 @@ function woo_includes_tab_content()
 
 }
 
+//agregar tab rates con la informacio de mapas
+add_filter('woocommerce_product_tabs', 'woo_map_tour_tab');
+function woo_map_tour_tab($tabs)
+{
+  
+  // Adds the new tab
+    if (is_product() && has_term('PACKAGES', 'product_cat')) {
+        $tabs['map'] = array(
+            'title' => __('Map Tour', 'woocommerce'),
+            'priority' => 50,
+            'callback' => 'woo_map_tour_tab_content'
+        );
+    }
+
+
+    return $tabs;
+
+}
+function woo_map_tour_tab_content()
+{
+
+  // The new tab content
+
+    echo '<h2>Map Tour</h2>';
+  //echo '<p>Here\'s your new product tab.</p>';
+    echo rwmb_meta('rw_map_tour');
+
+}
+
 // Hook in
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
