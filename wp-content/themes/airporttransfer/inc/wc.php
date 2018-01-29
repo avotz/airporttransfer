@@ -62,7 +62,7 @@ function woo_details_tab( $tabs ) {
   
   $tabs['details'] = array(
     'title'   => __( 'Details', 'woocommerce' ),
-    'priority'  => 50,
+    'priority'  => 60,
     'callback'  => 'woo_details_tab_content'
   );
 
@@ -117,7 +117,7 @@ function woo_map_tour_tab($tabs)
     if (is_product() && has_term('PACKAGES', 'product_cat')) {
         $tabs['map'] = array(
             'title' => __('Map Tour', 'woocommerce'),
-            'priority' => 50,
+            'priority' => 70,
             'callback' => 'woo_map_tour_tab_content'
         );
     }
