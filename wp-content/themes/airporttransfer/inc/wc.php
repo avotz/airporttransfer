@@ -85,7 +85,7 @@ function woo_includes_tab($tabs)
 {
   
   // Adds the new tab
-    if (is_product() && has_term('Packages', 'product_cat')) {
+    if (is_product() && has_term('PACKAGES', 'product_cat')) {
         $tabs['includes'] = array(
             'title' => __('Includes', 'woocommerce'),
             'priority' => 50,
