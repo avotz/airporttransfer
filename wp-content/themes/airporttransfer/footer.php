@@ -93,6 +93,11 @@
             ga('send', 'event', 'Book Transfer Button', 'submit');
         }, false );
       }
+
+      jQuery('body').on('click','#tab-title-map',function() {
+        gmwdInitMainMap('wd-map<?php echo $shortcode_id; ?>',false, '<?php echo $shortcode_id; ?>');
+        gmwdReadyFunction(‘<?php echo $shortcode_id; ?>’);
+    });
      
 </script>
 
