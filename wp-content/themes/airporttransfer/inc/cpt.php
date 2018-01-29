@@ -25,16 +25,21 @@ function airporttransfer_register_meta_boxes( $meta_boxes ) {
         )
     );
     // 2nd meta box
-    /*$meta_boxes[] = array(
-        'title'      => __( 'Media', 'textdomain' ),
-        'post_types' => 'movie',
+    $meta_boxes[] = array(
+        'title'      => __('Additional Information', 'textdomain' ),
+        'post_types' => 'product',
         'fields'     => array(
             array(
-                'name' => __( 'URL', 'textdomain' ),
-                'id'   => $prefix . 'url',
-                'type' => 'text',
+                'name' => 'Includes',
+                'desc' => 'Includes',
+                'id' => $prefix . 'includes',
+                'type' => 'WYSIWYG',
+                'options' => array('textarea_rows' => 5),
+                'std' => '',
+                'class' => 'custom-class'
+
             ),
         )
-    );*/
+    );
     return $meta_boxes;
 }

@@ -79,6 +79,35 @@ function woo_details_tab_content() {
   
 }
 
+//agregar tab rates con la informacio de includes
+add_filter('woocommerce_product_tabs', 'woo_includes_tab');
+function woo_includes_tab($tabs)
+{
+  
+  // Adds the new tab
+    if (is_product() && has_term('Packages', 'product_cat')) {
+        $tabs['includes'] = array(
+            'title' => __('Includes', 'woocommerce'),
+            'priority' => 50,
+            'callback' => 'woo_includes_tab_content'
+        );
+    }
+
+
+    return $tabs;
+
+}
+function woo_includes_tab_content()
+{
+
+  // The new tab content
+
+    echo '<h2>Includes</h2>';
+  //echo '<p>Here\'s your new product tab.</p>';
+    echo rwmb_meta('rw_includes');
+
+}
+
 // Hook in
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
