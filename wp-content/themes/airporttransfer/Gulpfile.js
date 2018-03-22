@@ -14,7 +14,7 @@ var gulp        = require('gulp'),
           /*server: {
             baseDir: "./"
           }*/
-          proxy: "airporttransfer.dev"
+          proxy: "airporttransfer.test"
       });
       
   });

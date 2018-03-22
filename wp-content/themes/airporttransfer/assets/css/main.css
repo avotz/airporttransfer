@@ -1075,6 +1075,10 @@ li.highlighted {
 .entry-content a {
   color: #9c6;
 }
+.page-template-page-hotels .btn-budget,
+.hotel-template-default .btn-budget {
+  display: none !important;
+}
 .header {
   padding: 0;
   position: relative;
