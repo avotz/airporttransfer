@@ -2000,6 +2000,9 @@ li.highlighted {
     width: 33%;
   }
 }
+.wpcf7-form label {
+  display: block !important;
+}
 .woocommerce-breadcrumb {
   display: none;
 }

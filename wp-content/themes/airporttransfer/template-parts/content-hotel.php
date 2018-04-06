@@ -67,7 +67,7 @@
 		?>
         </div>
         <div class="hotel-content-sidebar">
-            <a href="#hotel-popup" class="btn verde hotel-popup-link" data-title="<?php the_title(); ?>">Inquiry</a>
+            <a href="#hotel-popup" class="btn verde hotel-popup-link" data-title="<?php the_title(); ?>">Inquiry transport</a>
             <div class="tripadvisor">
                 <div id="TA_selfserveprop504" class="TA_selfserveprop">
                 <ul id="TpMyiwJeRBg0" class="TA_links 0WwiCzN1">

@@ -397,7 +397,7 @@
        
       
         //$('#tour-popup').find('select[name="tours[]"] option[value="'+ $(this).attr('data-title') +'"]').attr("selected",true).change();
-        $('#hotel-popup').find('input[name="your-subject"]').val('Inquire for '+$(this).attr('data-title'));
+        $('#hotel-popup').find('input[name="your-subject"]').val('Inquire for '+$(this).attr('data-title') + ' Transportation');
         
         
         
