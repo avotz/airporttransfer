@@ -1778,8 +1778,11 @@ li.highlighted {
   background: #9c6;
   padding-bottom: 20px;
   position: relative;
-  padding-top: 30px;
+  padding-top: 0px;
   text-align: center;
+}
+.footer-logo {
+  width: 200px;
 }
 .footer-container {
   display: -webkit-box;
@@ -1800,11 +1803,29 @@ li.highlighted {
   -ms-flex-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.footer-container.flex-start {
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -o-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
 }
 .footer-container .copyright,
 .footer-container .phone-numbers,
 .footer-container .redes {
   width: 100%;
+}
+.footer hr {
+  border: 1px solid #fff;
+  margin-bottom: 1rem;
 }
 .footer em {
   position: absolute;
@@ -1821,23 +1842,38 @@ li.highlighted {
   color: #fff;
   text-transform: uppercase;
 }
-.footer .copyright .avotz {
+.footer .avotz {
   font-size: 0.6rem;
 }
-.footer .copyright .avotz a {
+.footer .avotz a {
   color: #fff;
   margin-left: 0.2rem;
 }
-.footer .copyright .avotz i {
+.footer .avotz i {
   font-size: 2.5rem;
   vertical-align: middle;
 }
 .footer .redes {
   color: #fff;
 }
+.footer .redes h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .footer .redes a {
   text-transform: uppercase;
-  color: #fff;
+  color: verde;
+  display: block;
+  font-size: 1rem;
+  padding: 0.3rem;
+}
+.footer .redes a i {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 0.5rem;
+  height: 28px;
+  width: 28px;
 }
 .footer .redes a:hover {
   color: #695c3e;

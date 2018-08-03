@@ -806,16 +806,25 @@ li.highlighted
 	background $verde
 	padding-bottom 20px
 	position relative
-	padding-top 30px
+	padding-top 0px
 	text-align center
+	&-logo
+		width: 200px
+
 	&-container
 		display flex
 		flex-wrap wrap
 		justify-content space-between
+		align-items: center
+		&.flex-start
+			justify-content: start
 		.copyright
 		.phone-numbers
 		.redes
 			width 100%//33%
+	hr
+		border: 1px solid white
+		margin-bottom: 1rem
 	em 
 		position absolute
 		top 0
@@ -830,20 +839,34 @@ li.highlighted
 		color #ffffff
 		text-transform uppercase
 
-	.copyright
-		.avotz
-			font-size .6rem
-			a 
-				color white
-				margin-left .2rem
-			i 
-				font-size 2.5rem
-				vertical-align middle
+	//.copyright
+	.avotz
+		font-size .6rem
+		a 
+			color white
+			margin-left .2rem
+		i 
+			font-size 2.5rem
+			vertical-align middle
 	.redes
 		color #ffffff
+		h3
+			margin-top: 0
+			margin-bottom: 0
 		a 
 			text-transform uppercase
-			color #ffffff
+			color verde
+			display block
+			font-size: 1rem
+			padding: .3rem
+			
+			i
+				display inline-block
+				border-radius: 50%
+				background-color: white
+				padding: .5rem
+				height 28px
+				width: 28px
 			&:hover 
 				color #695c3e
 				transition all 0.35s ease

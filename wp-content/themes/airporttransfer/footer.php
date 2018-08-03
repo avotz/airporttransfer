@@ -14,25 +14,41 @@
 
 	<footer class="footer">
         <div class="inner">
+            <div class="footer-container flex-start">
+                <div class="footer-logo">
+                    <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.png" alt="Guanacaste Viajes"></a>
+                </div>
+                <div class="tripadvisor">
+                     <div id="TA_certificateOfExcellence918" class="TA_certificateOfExcellence"><ul id="6KV4jNSJrj" class="TA_links B3GeyqTv1"><li id="wajqJc8nzq" class="4FY0PGBQzdf"><a target="_blank" href="https://www.tripadvisor.co.uk/Attraction_Review-g309240-d2102243-Reviews-Guanacaste_Viajes_Tours-Liberia_Province_of_Guanacaste.html"><img src="<?php echo get_template_directory_uri(); ?>/img/CoE2016_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"/></a></li></ul></div><script src="https://www.jscache.com/wejs?wtype=certificateOfExcellence&uniq=918&locationId=2102243&lang=en_UK&year=2016&display_version=2"></script>
+                    <div id="TA_certificateOfExcellence983" class="TA_certificateOfExcellence"><ul id="aRAz22zP" class="TA_links QZTzOruy7Dgo"><li id="G45DorwWaqw" class="sEXjfr4m6"><a target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g309240-d2102243-Reviews-Guanacaste_Viajes_Tours-Liberia_Province_of_Guanacaste.html"><img src="<?php echo get_template_directory_uri(); ?>/img/CoE2017_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"/></a></li></ul></div><script src="https://www.jscache.com/wejs?wtype=certificateOfExcellence&uniq=983&locationId=2102243&lang=en_US&year=2017&display_version=2"></script>   
+                </div>
+            </div>
+            <hr>
         	<div class="footer-container">
-	        	<div class="copyright"><p>Guanacaste viajes © 2017</p><p class="avotz">Desarrollado por <a href="http://avotz.com" target="_blank"><i class="icon-avotz"></i></a></p>
+	        	<div class="copyright">
 	                <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=SfhxEla2LlXOtSRrRy4MxCTCLdcbWU1teGmbuzj3igJ88v7tKMNen9YEmMFj"></script></span>
 	                <img src="<?php echo get_template_directory_uri(); ?>/img/cc-badges-ppppcmcvdam.png" alt="Pay with PayPal, PayPal Credit or any major credit card" class="credit-logos" />
+                    <a href="#" class="sitelock" onclick="window.open('https://www.sitelock.com/verify.php?site=airporttransfercostarica.com','SiteLock','width=600,height=600,left=160,top=170');" ><img class="img-responsive" alt="SiteLock" title="SiteLock" src="//shield.sitelock.com/shield/airporttransfercostarica.com" /></a>
 	            </div>
 	            <div class="phone-numbers">
-	                <p><strong>USA Phone Number:</strong> +1-404-963-9097 </p><p><strong>Costa Rica:</strong> +011-506-2697-1818 | +011-506-8704-3690</p><br />
-                    <a href="https://www.google.com/maps/place/Guanacaste+Viajes+%26+Tours/@10.5278787,-85.6458598,14z/data=!4m5!3m4!1s0x0:0x51628778f1f8d914!8m2!3d10.526166!4d-85.6433" target="_blank" style="color:white;">Sardinal, 75 north of Sea Wonder Academy</a><br>
+                    <p>Guanacaste viajes © 2017</p>
+                    <a href="https://www.google.com/maps/place/Guanacaste+Viajes+%26+Tours/@10.5278787,-85.6458598,14z/data=!4m5!3m4!1s0x0:0x51628778f1f8d914!8m2!3d10.526166!4d-85.6433" target="_blank" style="color:white;">Sardinal, 75 north of Sea Wonder Academy</a>
+                 <p><strong>USA Phone Number:</strong> +1-404-963-9097 </p><p><strong>Costa Rica:</strong> +011-506-2697-1818 | +011-506-8704-3690</p>
+	                <br />
+                   
+                    <p class="avotz">Desarrollado por <a href="http://avotz.com" target="_blank"><i class="icon-avotz"></i></a></p>
 	                <!-- <div id="TA_certificateOfExcellence501" class="TA_certificateOfExcellence"><ul id="IpwE3XUB1lOP" class="TA_links jM54Pmu8W"><li id="WpGhLhOy4" class="udUMqg"><a target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g309240-d2102243-Reviews-Guanacaste_Viajes_Tours-Liberia_Province_of_Guanacaste.html"><img src="https://www.tripadvisor.com/img/cdsi/img2/awards/CoE2015_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"/></a></li></ul></div><script src="https://www.jscache.com/wejs?wtype=certificateOfExcellence&uniq=501&locationId=2102243&lang=en_US&year=2015&display_version=2"></script> -->
-	                <div id="TA_certificateOfExcellence918" class="TA_certificateOfExcellence"><ul id="6KV4jNSJrj" class="TA_links B3GeyqTv1"><li id="wajqJc8nzq" class="4FY0PGBQzdf"><a target="_blank" href="https://www.tripadvisor.co.uk/Attraction_Review-g309240-d2102243-Reviews-Guanacaste_Viajes_Tours-Liberia_Province_of_Guanacaste.html"><img src="<?php echo get_template_directory_uri(); ?>/img/CoE2016_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"/></a></li></ul></div><script src="https://www.jscache.com/wejs?wtype=certificateOfExcellence&uniq=918&locationId=2102243&lang=en_UK&year=2016&display_version=2"></script>
-                    <div id="TA_certificateOfExcellence983" class="TA_certificateOfExcellence"><ul id="aRAz22zP" class="TA_links QZTzOruy7Dgo"><li id="G45DorwWaqw" class="sEXjfr4m6"><a target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g309240-d2102243-Reviews-Guanacaste_Viajes_Tours-Liberia_Province_of_Guanacaste.html"><img src="<?php echo get_template_directory_uri(); ?>/img/CoE2017_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"/></a></li></ul></div><script src="https://www.jscache.com/wejs?wtype=certificateOfExcellence&uniq=983&locationId=2102243&lang=en_US&year=2017&display_version=2"></script>    
+	                
 	                <!--<span id="siteseal"><script type="text/javascript" src="https://seal.starfieldtech.com/getSeal?sealID=mq6QnWtPXw00suNUVWLlYvccgxIy24zeNuwFeLjlIohOjHUEuppZUj"></script></span>
 	                </div>-->
 	                
 	              
 	            </div>
-	            <div class="redes"><a href="https://www.facebook.com/GuanacasteViaje" target="_blank">Facebook</a> • <a href="https://twitter.com/guanacasteviaje" target="_blank">Twitter</a> • <a href="https://plus.google.com/b/103229597720510667827/103229597720510667827/about?gmbpt=true&pageId=103229597720510667827&hl=en" target="_blank">Google+</a>
-	            • <a href="https://www.youtube.com/channel/UCOMPdeJl_Ft5VvyfMMu2h3g" target="_blank">Youtube</a>
-	            <a href="#" class="sitelock" onclick="window.open('https://www.sitelock.com/verify.php?site=airporttransfercostarica.com','SiteLock','width=600,height=600,left=160,top=170');" ><img class="img-responsive" alt="SiteLock" title="SiteLock" src="//shield.sitelock.com/shield/airporttransfercostarica.com" /></a>
+	            <div class="redes">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com/GuanacasteViaje" target="_blank"><i class="fa fa-facebook"></i></a><a href="https://twitter.com/guanacasteviaje" target="_blank"><i class="fa fa-twitter"></i></a> <a href="https://plus.google.com/b/103229597720510667827/103229597720510667827/about?gmbpt=true&pageId=103229597720510667827&hl=en" target="_blank"><i class="fa fa-google-plus"></i></a>
+	            <a href="https://www.youtube.com/channel/UCOMPdeJl_Ft5VvyfMMu2h3g" target="_blank"><i class="fa fa-youtube"></i></a>
+	            
 	            </div>
         	</div>
            
