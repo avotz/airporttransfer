@@ -1862,7 +1862,7 @@ li.highlighted {
 }
 .footer .redes a {
   text-transform: uppercase;
-  color: verde;
+  color: #9c6 !important;
   display: block;
   font-size: 1rem;
   padding: 0.3rem;
@@ -1876,7 +1876,7 @@ li.highlighted {
   width: 28px;
 }
 .footer .redes a:hover {
-  color: #695c3e;
+  color: #695c3e !important;
   -webkit-transition: all 0.35s ease;
   -moz-transition: all 0.35s ease;
   -o-transition: all 0.35s ease;
@@ -1900,6 +1900,10 @@ li.highlighted {
   .footer-container .redes {
     width: 25%;
   }
+}
+.sitelock {
+  display: inline-block !important;
+  margin-top: 5px;
 }
 .TA_certificateOfExcellence {
   width: 170px;

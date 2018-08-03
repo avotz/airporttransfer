@@ -28,7 +28,7 @@
 	        	<div class="copyright">
 	                <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=SfhxEla2LlXOtSRrRy4MxCTCLdcbWU1teGmbuzj3igJ88v7tKMNen9YEmMFj"></script></span>
 	                <img src="<?php echo get_template_directory_uri(); ?>/img/cc-badges-ppppcmcvdam.png" alt="Pay with PayPal, PayPal Credit or any major credit card" class="credit-logos" />
-                    <a href="#" class="sitelock" onclick="window.open('https://www.sitelock.com/verify.php?site=airporttransfercostarica.com','SiteLock','width=600,height=600,left=160,top=170');" ><img class="img-responsive" alt="SiteLock" title="SiteLock" src="//shield.sitelock.com/shield/airporttransfercostarica.com" /></a>
+                    <a href="#" class="sitelock" onclick="window.open('https://www.sitelock.com/verify.php?site=airporttransfercostarica.com','SiteLock','width=600,height=600,left=160,top=170');" ><img class="img-responsive SiteLock" alt="SiteLock" title="SiteLock" src="//shield.sitelock.com/shield/airporttransfercostarica.com" /></a>
 	            </div>
 	            <div class="phone-numbers">
                     <p>Guanacaste viajes © 2017</p>
