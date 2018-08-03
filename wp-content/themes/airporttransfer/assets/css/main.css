@@ -2469,3 +2469,52 @@ li.highlighted {
     padding: 2rem;
   }
 }
+.booking-box form {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.booking-box h2 {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  line-height: 2;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.booking-box .form-group {
+  margin-bottom: 15px;
+  position: relative;
+  color: #fff;
+}
+.booking-box {
+  position: absolute;
+  top: 0px;
+  right: 60px;
+  background: #fed150;
+  width: 300px;
+  z-index: 999;
+  height: 100%;
+  padding: 10px 15px;
+}
+a.move-to-booking {
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: #cd1c1f;
+  width: 100%;
+  display: block;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+a.move-to-booking:hover {
+  color: #fff;
+  text-decoration: none;
+}
+body {
+  overflow-x: hidden;
+}
