@@ -50,4 +50,7 @@ if($category->parent == 0){
 	
 
 </div>
+<div class="custom-fields">
+   <?php echo get_post_meta(get_the_ID(), 'bokun', true); ?>
+</div>
 
