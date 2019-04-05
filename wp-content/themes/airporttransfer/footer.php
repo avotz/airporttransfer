@@ -84,7 +84,7 @@
                     
 	<? php/*
         endif;*/ ?>
-    test
+    
 <?php wp_footer(); ?>
 
 <script>
