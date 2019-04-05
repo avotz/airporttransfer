@@ -47,7 +47,7 @@ get_header(); ?>
 					<form method="get" action="<?php echo esc_url( home_url( '/tours/?product_cat='. $categorySelected .'&location='. $locationSelected ) ); ?>" class="form-filters-tour">
 						
 						<div class="form-filters-tour-item">
-						    <label for="location">Where you staying
+						    <label for="location">Pick up Location
 ?</label>
 							<select name="location" id="location" style="width: 100%">
 							     <option value=""></option>
@@ -57,7 +57,7 @@ get_header(); ?>
 							</select>
 						</div>
 						<div class="form-filters-tour-item">
-						<label for="location">Choose your type of adventure</label>
+						<label for="location">Choose your type of Tour</label>
 							<select name="product_cat" id="product_cat" style="width: 100%">
 							    <option value=""></option>
 								<?php foreach ($categories as $cat) : ?>
@@ -179,7 +179,7 @@ get_header(); ?>
 	                                  </a>
 	                                </figure>
 									<div class="price">
-									<span>From 
+									<span>Price From 
                                        <?php 
                                       
                                         $currency = get_woocommerce_currency_symbol();

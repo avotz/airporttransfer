@@ -806,25 +806,16 @@ li.highlighted
 	background $verde
 	padding-bottom 20px
 	position relative
-	padding-top 0px
+	padding-top 30px
 	text-align center
-	&-logo
-		width: 200px
-
 	&-container
 		display flex
 		flex-wrap wrap
 		justify-content space-between
-		align-items: center
-		&.flex-start
-			justify-content: start
 		.copyright
 		.phone-numbers
 		.redes
 			width 100%//33%
-	hr
-		border: 1px solid white
-		margin-bottom: 1rem
 	em 
 		position absolute
 		top 0
@@ -839,36 +830,22 @@ li.highlighted
 		color #ffffff
 		text-transform uppercase
 
-	//.copyright
-	.avotz
-		font-size .6rem
-		a 
-			color white
-			margin-left .2rem
-		i 
-			font-size 2.5rem
-			vertical-align middle
+	.copyright
+		.avotz
+			font-size .6rem
+			a 
+				color white
+				margin-left .2rem
+			i 
+				font-size 2.5rem
+				vertical-align middle
 	.redes
 		color #ffffff
-		h3
-			margin-top: 0
-			margin-bottom: 0
 		a 
 			text-transform uppercase
-			color $verde !important
-			display block
-			font-size: 1rem
-			padding: .3rem
-			
-			i
-				display inline-block
-				border-radius: 50%
-				background-color: white
-				padding: .5rem
-				height 28px
-				width: 28px
+			color #ffffff
 			&:hover 
-				color #695c3e !important
+				color #695c3e
 				transition all 0.35s ease
 		.sitelock
 			display block
@@ -886,9 +863,6 @@ li.highlighted
 			.redes
 				width 25%
 
-.sitelock
-	display inline-block !important
-	margin-top: 5px;
 .TA_certificateOfExcellence
 	width 170px
 	margin 0 auto
@@ -1271,55 +1245,3 @@ li.highlighted
 			width 30%
 			border-left 1px solid #ddd
 			padding: 2rem
-
-.booking-box form {
-    position: relative;   
-    display: block;
-    overflow: hidden;
-}
-.booking-box h2 {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    color: #fff;
-    text-align: center;
-    margin: 0;
-    line-height: 2;
-    font-size: 18px;
-	font-weight:bolder;
-}
-.booking-box .form-group {
-    margin-bottom: 15px;
-    position: relative;
-    color: #ffff;
-}
-
-.booking-box {
-    position: absolute;
-    top: 0px;
-    right: 60px;
-    background: rgba(254,209,80,1);
-    width: 300px;
-    z-index: 999;
-    height: 100%;
-	padding: 10px 15px;
-}
-
-a.move-to-booking {
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    background: #cd1c1f;
-    width: 100%;
-    display: block;
-    font-weight: bolder;
-    text-transform: uppercase;
-}
-a.move-to-booking:hover{
-	color:#fff;
-	text-decoration:none;
-}
-body{
-	overflow-x:hidden;
-}

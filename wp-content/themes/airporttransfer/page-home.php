@@ -13,19 +13,19 @@
  */
 
 get_header(); ?>
-	 <section id="slider">
+	<section id="slider">
         <div class="home-slider owl-carousel">
 	  	 
-	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/Arenal-Volcano.jpg');">
+	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/Arenal-Volcano1.jpg');">
 
 	  	  </div>
-	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/Beach-Family.jpg');">
+	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/Beach-Family1.jpg');">
 
 	  	  </div>
-	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/Rio-Celeste.jpg');">
+	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/Rio-Celeste1.jpg');">
 
 	  	  </div>
-	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/Sunset-Surfing.jpg');">
+	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/Sunset-Surfing1.jpg');">
 
 	  	  </div>
 	  	  
@@ -33,7 +33,23 @@ get_header(); ?>
 	  	  	  
 		</div>
         <em class="border-colors"></em>
+	 <div class="booking-box">
+			<div  style="padding: 3px;">
+            <div class="">
+                <div class="">
+                    
+                <div class="col-md-12 col-lg-12 col-sm-12">
+                         <a href="https://airporttransfercostarica.com/reservation-page/" class="move-to-booking">Book Transfer</a>
+                        
+                    </div>
+				</div>
+                
+            </div>
+        </div>
+			
+		
     </section>
+   
     <section class="top-info">
              
              <div class="inner">
@@ -41,8 +57,8 @@ get_header(); ?>
                 <div class="top-info-container">
                    <article class="top-info-item info-main">
                    	    <h2>
-                   	    	About <br>
-                   	    	<span>Costa Rica</span>
+                   	    	Private <br>
+                   	    	<span>Transfer</span>
                    	    </h2>
                    	    <?php rewind_posts(); ?>
 			            <?php query_posts( 'post_type=page&page_id=5' ); ?>
@@ -59,8 +75,8 @@ get_header(); ?>
                    </article>
                    <article class="top-info-item info-main">
                    		<h2>
-                   	    	Liberia <br>
-                   	    	<span>Airport (LIR)</span>
+                   	    	Door<br>
+                   	    	<span>To Door</span>
                    	    </h2>
                    		 <?php rewind_posts(); ?>
 			            <?php query_posts( 'post_type=page&page_id=7' ); ?>
@@ -77,8 +93,8 @@ get_header(); ?>
                    </article>
                    <article class="top-info-item info-main">
                    		<h2>
-                   	    	Local <br>
-                   	    	<span>Attraction</span>
+                   	    	Hourly <br>
+                   	    	<span>Service</span>
                    	    </h2>
                    		 <?php rewind_posts(); ?>
 			            <?php query_posts( 'post_type=page&page_id=9' ); ?>
@@ -120,7 +136,7 @@ get_header(); ?>
 			            <?php endif; ?>
 			          
                    </article>
-                   <article class="services-box-item service">
+                  <!-- <article class="services-box-item service">
                    		<h2>
                    	    	Liberia <br>
                    	    	<span>Airport Transfer</span>
@@ -133,11 +149,11 @@ get_header(); ?>
 			                   
 			    
 			                <?php endwhile; ?>
-			                <!-- post navigation -->
+			                
 			              
 			            <?php endif; ?>
 			          
-                   </article>
+                   </article>--->
                    <article class="services-box-item service">
                    		<h2>
                    	    	Costa Rica <br>

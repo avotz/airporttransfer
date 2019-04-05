@@ -26,13 +26,14 @@
         <div class="inner">
             <div class="up-box-container">
             	<div class="up-box-contact">
-            		<b>USA PHONE NUMBER:</b> +1-404-963-9097 <br>
-					<b>COSTA RICA:</b> +011-506-2697-1818 | <b>EMERGENCY:</b>+011-506-8704-3690 <br>
-					THE OFICCIAL AIRPORT TRANSFER COMPANY IN LIBERIA AIRPORT
+            		<b>USA PHONE NUMBER:</b> +1-404-448-1729<br>
+                <b>COSTA RICA:</b> OFFICE: +506-2573-2323 / EMERGENCY: +506-8704-3690 <br>
+					THE OFICCIAL AIRPORT TRANSFER COMPANY 
             	</div>
             	<div class="up-box-social">
             		<a href="https://www.facebook.com/GuanacasteViaje" target="_blank"><i class="fa fa-facebook"></i></a>
-            		<a href="https://twitter.com/guanacasteviaje" target="_blank"><i class="fa fa-twitter"></i></a>
+            		<a href="https://wa.me/0050687043690" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                <a href="https://twitter.com/GuanacasteVjs" target="_blank"><i class="fa fa-twitter"></i></a>
             		<a href="https://plus.google.com/b/103229597720510667827/103229597720510667827/about?gmbpt=true&pageId=103229597720510667827&hl=en" target="_blank"><i class="fa fa-google-plus"></i></a>
                     <a href="https://www.youtube.com/channel/UCOMPdeJl_Ft5VvyfMMu2h3g" target="_blank"><i class="fa fa-youtube"></i></a>
             		<a href="http://www.tripadvisor.com/Attraction_Review-g309240-d2102243-Reviews-Guanacaste_Viajes_Tours-Liberia_Province_of_Guanacaste.html" target="_blank"><i class="fa fa-tripadvisor"></i></a>
@@ -55,10 +56,13 @@
 	          ); 
 	          ?>
             <a href="#" class="btn-menu"><i class="icon-menu"></i></a>
-            <div class="relative">
+            
+            <!---
+			<div class="relative">
                 
-            <a href="#transfer-popup" class="btn-budget transfer-popup-link"><i class="icon-book"></i>Book Transfer </a>
+            <a href="https://airporttransfercostarica.com/booking/" onclick="location.replace('https://airporttransfercostarica.com/booking/')" class="btn-budget transfer-popup-link" target="_blank">Book Transfer </a>
             </div>
+			-->
         </div>
     </section>
 </header>

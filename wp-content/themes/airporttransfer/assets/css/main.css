@@ -50,11 +50,11 @@ a:hover {
   outline: 0;
 }
 h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 0.67em 0;
 }
 h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 0.83em 0;
 }
 h3 {
@@ -1778,11 +1778,8 @@ li.highlighted {
   background: #9c6;
   padding-bottom: 20px;
   position: relative;
-  padding-top: 0px;
+  padding-top: 30px;
   text-align: center;
-}
-.footer-logo {
-  width: 200px;
 }
 .footer-container {
   display: -webkit-box;
@@ -1803,29 +1800,11 @@ li.highlighted {
   -ms-flex-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -o-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-.footer-container.flex-start {
-  -webkit-box-pack: start;
-  -moz-box-pack: start;
-  -o-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
 }
 .footer-container .copyright,
 .footer-container .phone-numbers,
 .footer-container .redes {
   width: 100%;
-}
-.footer hr {
-  border: 1px solid #fff;
-  margin-bottom: 1rem;
 }
 .footer em {
   position: absolute;
@@ -1842,41 +1821,26 @@ li.highlighted {
   color: #fff;
   text-transform: uppercase;
 }
-.footer .avotz {
+.footer .copyright .avotz {
   font-size: 0.6rem;
 }
-.footer .avotz a {
+.footer .copyright .avotz a {
   color: #fff;
   margin-left: 0.2rem;
 }
-.footer .avotz i {
+.footer .copyright .avotz i {
   font-size: 2.5rem;
   vertical-align: middle;
 }
 .footer .redes {
   color: #fff;
 }
-.footer .redes h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
 .footer .redes a {
   text-transform: uppercase;
-  color: #9c6 !important;
-  display: block;
-  font-size: 1rem;
-  padding: 0.3rem;
-}
-.footer .redes a i {
-  display: inline-block;
-  border-radius: 50%;
-  background-color: #fff;
-  padding: 0.5rem;
-  height: 28px;
-  width: 28px;
+  color: #fff;
 }
 .footer .redes a:hover {
-  color: #695c3e !important;
+  color: #695c3e;
   -webkit-transition: all 0.35s ease;
   -moz-transition: all 0.35s ease;
   -o-transition: all 0.35s ease;
@@ -1900,10 +1864,6 @@ li.highlighted {
   .footer-container .redes {
     width: 25%;
   }
-}
-.sitelock {
-  display: inline-block !important;
-  margin-top: 5px;
 }
 .TA_certificateOfExcellence {
   width: 170px;
@@ -2472,53 +2432,4 @@ li.highlighted {
     border-left: 1px solid #ddd;
     padding: 2rem;
   }
-}
-.booking-box form {
-  position: relative;
-  display: block;
-  overflow: hidden;
-}
-.booking-box h2 {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  color: #fff;
-  text-align: center;
-  margin: 0;
-  line-height: 2;
-  font-size: 18px;
-  font-weight: bolder;
-}
-.booking-box .form-group {
-  margin-bottom: 15px;
-  position: relative;
-  color: #fff;
-}
-.booking-box {
-  position: absolute;
-  top: 0px;
-  right: 60px;
-  background: #fed150;
-  width: 300px;
-  z-index: 999;
-  height: 100%;
-  padding: 10px 15px;
-}
-a.move-to-booking {
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  background: #cd1c1f;
-  width: 100%;
-  display: block;
-  font-weight: bolder;
-  text-transform: uppercase;
-}
-a.move-to-booking:hover {
-  color: #fff;
-  text-decoration: none;
-}
-body {
-  overflow-x: hidden;
 }

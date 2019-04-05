@@ -65,22 +65,90 @@
 
 			
 		?>
-        </div>
-        <div class="hotel-content-sidebar">
-            <a href="#hotel-popup" class="btn verde hotel-popup-link" data-title="<?php the_title(); ?>">Inquiry transport</a>
-            <div class="tripadvisor">
-                <div id="TA_selfserveprop504" class="TA_selfserveprop">
-                <ul id="TpMyiwJeRBg0" class="TA_links 0WwiCzN1">
-                <li id="O0KspAKMYTvP" class="hsGfvs">
-                <a target="_blank" href="https://www.tripadvisor.com/"><img src="https://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor"/></a>
-                </li>
-                </ul>
+        </div>  
+            <div class="hotel-content-sidebar">
+               <div class="">
+                    <h2>Airport Transportation</h2>
                 </div>
-                <script src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=504&amp;locationId=2102243&amp;lang=en_US&amp;rating=true&amp;nreviews=5&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=false&amp;border=true&amp;display_version=2"></script>
-            </div>
-            
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="form-group">
+                            <span id="lblTransferType">Transfer Type</span>
+                            <select name="ddlTransferType" id="ddlTransferType" class="form-control">
+								<option value="1" data-type="roundtrip">Round Trip</option>
+								<option value="2" data-type="tohotel">Transfer to Hotel</option>
+								<option value="" data-type="toairport">Transfer to Airport</option>
+
+							</select>
+                        </div>
+                    </div>
+                </div>
+    
+        <div class="row">
+                    <div id="layerAdult" class="col-md-6 col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <span id="MainContent_lblAdults">Adults</span>
+                            <select name="ddlAdults" id="ddlAdults" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+
+							</select>
+                        </div>
+                    </div>
+                    <div id="layerChildren" class="col-md-6 col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <span id="MainContent_lblChildren">Children</span>
+                            <select name="ctl00$ctl00$MainContent$ddlChildren" id="ddlChildren" class="form-control">
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+
+							</select>
+                        </div>
+                    </div>
+                    <div id="layerInfant" class="col-md-4 col-lg-4 col-sm-12 hidden">
+                        <div class="form-group">
+                            <span id="MainContent_lblInfalts">Infants (0-1)</span>
+                            <select name="ctl00$ctl00$MainContent$ddlInfants" id="ddlInfants" class="form-control">
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+
+							</select>
+                        </div>
+                    </div>
+                </div>   <br>
+      
+        <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                         <a href="https://airporttransfercostarica.com/reservation-page/" class="move-to-booking">Book Transfer</a>
+                        
+                    </div><br>
+ <p style="color: #ff6600" align="center" ><strong>Why book with us?</strong></p>
+          <ul class="fa-ul">
+  <li><i class="fa-li fa fa-usd fa-1x" style="color: #ff6600"></i>No hidden cost.</li>
+  <li><i class="fa-li fa fa-check-square" style="color: #ff6600"></i>Instant booking confirmation.</li>
+  <li><i class="fa-li fa fa-check-square" style="color: #ff6600"></i>Best price guarantee.</li>
+  <li><i class="fa-li fa fa-headphones" style="color: #ff6600"></i>Customer care available 24/7.</li> 
+</ul>        
+<div>
+Our promise is to offer great airport transfer service and superior customer service. If you need to cancel, make changes or help planning your vacation you can count on us to be there by your side.        
         </div>
-       
+          
 	</div><!-- .entry-content -->
     </div>
     

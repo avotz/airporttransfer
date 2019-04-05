@@ -46,8 +46,7 @@ get_header('shop'); ?>
 			<form method="get" action="<?php echo esc_url( home_url( '/tours/?product_cat='. $categorySelected .'&location='. $locationSelected ) ); ?>" class="form-filters-tour">
 				
 				<div class="form-filters-tour-item">
-					<label for="location">Where you staying
-?</label>
+					<label for="location">Pick up Location?</label>
 					<select name="location" id="location" style="width: 100%">
 						 <option value=""></option>
 						<?php foreach ($locations as $loc) : ?>
