@@ -226,7 +226,7 @@ li.highlighted
 .inner
 	margin-right auto
 	margin-left auto
-	max-width 940px
+	max-width 1220px
 	//display table
 	padding 0 1em
 .entry-content 
@@ -710,7 +710,8 @@ li.highlighted
 		&-item 
 			width 33%
 
-.main 
+.main
+	background-color: #F4F4F4 
 	.page
 	.error-404
 		padding-top 2rem
@@ -733,21 +734,23 @@ li.highlighted
 		width 100%
 		margin-bottom 1rem
 		position: relative
+		border 1px solid #e6e6e6
 		img 
 			display block
 			height 190px //240px
 			width: 100%;
 		h4
-			color white
+			color #000
 			margin-bottom 0
 			margin-top 0
-			text-align center
-			background-color verde
-			font-size 16px
+			text-align left
+			//background-color white
+			font-size 14px
+			line-height: 18px
 			a 
-				color white
+				color #000
 		a 
-			color white
+			color #000
 			&.button 
 				background-color verde
 				padding .5rem
@@ -757,16 +760,32 @@ li.highlighted
 		.entry-content
 			padding 0
 			background-color transparent
+		.tour-title
+			min-height: 50px
 		.price 
-			position: absolute
+			//position: absolute
 			top 0
 			z-index: 99
-			background: $naranja
-			color white
-			padding: .2rem 1rem
+			//background: $naranja
+			color #000
+			//padding: .2rem 1rem
+			text-align: left
+			margin-top: 10px
+			
+			.from
+				display: block
+				font-size: 12px
+				line-height: .8
+				font-weight: normal
+				color:#707070
+			span
+				font-size: 18px
+				font-weight: bold
 		.entry-excerpt
-			background-color $verde
-			color white
+			background-color white
+			color #000
+			padding 12px
+
 			&-wrapper
 				padding .5rem
 				display flex
@@ -788,7 +807,7 @@ li.highlighted
 @media screen and (min-width:620px)
 	.tours
 		&-item
-			width 49%
+			width calc(50% - 15px)
 			img 
 				max-height 200px
 				//height auto//200px
@@ -796,11 +815,11 @@ li.highlighted
 @media screen and (min-width: 768px)
 	.tours
 		&-item 
-			width 30%
+			width calc(25% - 15px)
 		&-filters
 			.form-filters-tour
 				.form-filters-tour-item 
-					width 48%
+					width 33%
 
 .footer
 	background $verde

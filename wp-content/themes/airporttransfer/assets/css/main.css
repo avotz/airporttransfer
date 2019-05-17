@@ -50,11 +50,11 @@ a:hover {
   outline: 0;
 }
 h1 {
-  font-size: 1.5em;
+  font-size: 2em;
   margin: 0.67em 0;
 }
 h2 {
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin: 0.83em 0;
 }
 h3 {
@@ -1069,7 +1069,7 @@ li.highlighted {
 .inner {
   margin-right: auto;
   margin-left: auto;
-  max-width: 940px;
+  max-width: 1220px;
   padding: 0 1em;
 }
 .entry-content a {
@@ -1630,6 +1630,9 @@ li.highlighted {
     width: 33%;
   }
 }
+.main {
+  background-color: #f4f4f4;
+}
 .main .page,
 .main .error-404 {
   padding-top: 2rem;
@@ -1666,6 +1669,7 @@ li.highlighted {
   width: 100%;
   margin-bottom: 1rem;
   position: relative;
+  border: 1px solid #e6e6e6;
 }
 .tours-item img {
   display: block;
@@ -1673,18 +1677,18 @@ li.highlighted {
   width: 100%;
 }
 .tours-item h4 {
-  color: #fff;
+  color: #000;
   margin-bottom: 0;
   margin-top: 0;
-  text-align: center;
-  background-color: verde;
-  font-size: 16px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 18px;
 }
 .tours-item h4 a {
-  color: #fff;
+  color: #000;
 }
 .tours-item a {
-  color: #fff;
+  color: #000;
 }
 .tours-item a.button {
   background-color: verde;
@@ -1698,17 +1702,31 @@ li.highlighted {
   padding: 0;
   background-color: transparent;
 }
+.tours-item .tour-title {
+  min-height: 50px;
+}
 .tours-item .price {
-  position: absolute;
   top: 0;
   z-index: 99;
-  background: #eeae11;
-  color: #fff;
-  padding: 0.2rem 1rem;
+  color: #000;
+  text-align: left;
+  margin-top: 10px;
+}
+.tours-item .price .from {
+  display: block;
+  font-size: 12px;
+  line-height: 0.8;
+  font-weight: normal;
+  color: #707070;
+}
+.tours-item .price span {
+  font-size: 18px;
+  font-weight: bold;
 }
 .tours-item .entry-excerpt {
-  background-color: #9c6;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
+  padding: 12px;
 }
 .tours-item .entry-excerpt-wrapper {
   padding: 0.5rem;
@@ -1760,7 +1778,7 @@ li.highlighted {
 }
 @media screen and (min-width: 620px) {
   .tours-item {
-    width: 49%;
+    width: calc(50% - 15px);
   }
   .tours-item img {
     max-height: 200px;
@@ -1768,10 +1786,10 @@ li.highlighted {
 }
 @media screen and (min-width: 768px) {
   .tours-item {
-    width: 30%;
+    width: calc(25% - 15px);
   }
   .tours-filters .form-filters-tour .form-filters-tour-item {
-    width: 48%;
+    width: 33%;
   }
 }
 .footer {

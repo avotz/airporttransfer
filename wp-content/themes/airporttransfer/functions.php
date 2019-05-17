@@ -159,6 +159,13 @@ function word_count($string, $limit) {
  
 }
 
+function add_query_vars_filter($vars)
+{
+	$vars[] = "q";
+	return $vars;
+}
+add_filter('query_vars', 'add_query_vars_filter');
+
 /**
  * Implement the Custom Header feature.
  */
