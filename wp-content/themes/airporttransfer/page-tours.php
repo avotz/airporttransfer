@@ -67,7 +67,7 @@ get_header(); ?>
 				</div>
 				<div class="form-filters-tour-item">
 					<label for="location">Keyword Search</label>
-					<input type="text" name="q" placeholder="Adventure, food" value="<?php echo $q ?>"">
+					<input type="text" name="q" placeholder="Adventure, river..." value="<?php echo $q ?>"">
 				</div>
 			</form>
 
