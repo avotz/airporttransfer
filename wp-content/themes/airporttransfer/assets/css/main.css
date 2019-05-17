@@ -1671,6 +1671,10 @@ li.highlighted {
   position: relative;
   border: 1px solid #e6e6e6;
 }
+.tours-item:hover {
+  -webkit-box-shadow: 0 12px 26px rgba(0,0,0,0.1);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.1);
+}
 .tours-item img {
   display: block;
   height: 190px;
