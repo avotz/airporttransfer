@@ -1786,6 +1786,14 @@ li.highlighted {
 }
 @media screen and (min-width: 768px) {
   .tours-item {
+    width: calc(33% - 15px);
+  }
+  .tours-filters .form-filters-tour .form-filters-tour-item {
+    width: 33%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .tours-item {
     width: calc(25% - 15px);
   }
   .tours-filters .form-filters-tour .form-filters-tour-item {
