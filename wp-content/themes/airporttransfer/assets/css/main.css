@@ -1688,6 +1688,8 @@ li.highlighted {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .tours-item .entry-thumbnail:before {
   content: '';
