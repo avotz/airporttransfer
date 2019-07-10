@@ -321,26 +321,26 @@
        
     });
 
-    //   $('.transfer-popup-link').magnificPopup({
-    //     type: 'inline',
-    //     midClick: true,
-    //     removalDelay: 500, //delay removal by X to allow out-animation
-    //     callbacks: {
-    //         beforeOpen: function() {
+      $('.transfer-popup-link').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        removalDelay: 500, //delay removal by X to allow out-animation
+        callbacks: {
+            beforeOpen: function() {
 
-    //             this.st.mainClass = 'mfp-zoom-out';
-    //             $('body').addClass('mfp-open');
-    //         },
-    //         beforeClose: function() {
+                this.st.mainClass = 'mfp-zoom-out';
+                $('body').addClass('mfp-open');
+            },
+            beforeClose: function() {
 
                
-    //             $('body').removeClass('mfp-open');
-    //         }
+                $('body').removeClass('mfp-open');
+            }
 
-    //     }
+        }
 
        
-    // });
+    });
 
 //      fillSelectTour();
 
