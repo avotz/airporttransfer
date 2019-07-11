@@ -63,8 +63,8 @@
 
 				<div class="relative">
 
-					<!-- <a href="https://airporttransfercostarica.com/reservation-page/" onclick="location.replace('https://airporttransfercostarica.com/reservation-page/')" class="btn-budget transfer-popup-link" target="_blank">Book Transfer </a> -->
-					<a href="#hotel-popup" class="btn-budget transfer-popup-link">Book Transfer </a> 
+					<a href="https://airporttransfercostarica.com/reservation-page/" onclick="location.replace('https://airporttransfercostarica.com/reservation-page/')" class="btn-budget transfer-popup-link" target="_blank">Book Transfer </a>
+					
 				</div>
 
 			</div>
