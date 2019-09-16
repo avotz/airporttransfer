@@ -56,7 +56,7 @@
     
     
 </div>
-	<div class="inner">
+	<div class="container mx-auto">
     <div class="entry-content hotel-content">
 		<div class="hotel-content-main">
         <h2>Information</h2>
