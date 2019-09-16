@@ -59,7 +59,7 @@
 	<div class="container mx-auto">
     <div class="entry-content hotel-content">
 		<div class="hotel-content-main">
-        <h2 class="entry-title hasBorder">Information</h2>
+        <h2 class="entry-title hasBorder inline-block">Information</h2>
         <?php
 			the_content();
 
