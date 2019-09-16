@@ -212,8 +212,8 @@ get_header();
 								<div class="date mt-12 mx-8 mb-2 uppercase">
 								<?php echo rwmb_meta( 'rw_testimonial_date' ); ?>
 								</div>
-								<div class="rate mt-10 mx-8 mb-2 uppercase text-center">
-									<img src="<?php echo get_template_directory_uri();  ?>/img/stars-trip.jpg" alt="stars">
+								<div class="rate mt-4 mx-8 mb-2 uppercase text-center">
+									<img src="<?php echo get_template_directory_uri();  ?>/img/stars-trip.png" alt="stars">
 								</div>
 							</div>
 						</div>
