@@ -321,16 +321,21 @@ get_header();
 			<div class="container mx-auto text-center">
 				<div class="flex flex-wrap justify-between max-w-lg mx-auto items-center">
 					<div class="logos-item w-1/2 md:w-1/4 px-4">
+					<a href="https://www.tripadvisor.com/Attraction_Review-g309240-d2102243-Reviews-Guanacaste_Viajes_and_Tours-Liberia_Province_of_Guanacaste.html" target="_blank">
 						<img src="<?php echo get_template_directory_uri();  ?>/img/2019-trip-advisor-certificate-of-excellence-big-green-airporttransfer.png" alt="" class="w-full">
+					</a>
+						
 					</div>
 					<div class="logos-item w-1/2 md:w-1/4 px-4">
-							<img src="<?php echo get_template_directory_uri();  ?>/img/siteseal_gd_3_h_d_m.gif" alt="" class="w-full">
+					<span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=SfhxEla2LlXOtSRrRy4MxCTCLdcbWU1teGmbuzj3igJ88v7tKMNen9YEmMFj"></script></span>
+							<!-- <img src="<?php echo get_template_directory_uri();  ?>/img/siteseal_gd_3_h_d_m.gif" alt="" class="w-full"> -->
 						</div>
 						<div class="logos-item w-1/2 md:w-1/4 px-4">
-							<img src="<?php echo get_template_directory_uri();  ?>/img/cc-badges-ppppcmcvdam.png" alt="" class="w-full">
+							<img src="<?php echo get_template_directory_uri();  ?>/img/visa-mastercard-amex-discover-icon.png" alt="" class="w-full">
 						</div>
 						<div class="logos-item w-1/2 md:w-1/4 px-4">
-							<img src="<?php echo get_template_directory_uri();  ?>/img/sitelock.jpg" alt="" class="w-full">
+							<a href="#" class="sitelock" onclick="window.open('https://www.sitelock.com/verify.php?site=airporttransfercostarica.com','SiteLock','width=600,height=600,left=160,top=170');" ><img class="img-responsive" alt="SiteLock" title="SiteLock" src="//shield.sitelock.com/shield/airporttransfercostarica.com" /></a>
+							<!-- <img src="<?php echo get_template_directory_uri();  ?>/img/sitelock.jpg" alt="" class="w-full"> -->
 						</div>
 				</div>
 			</div>
