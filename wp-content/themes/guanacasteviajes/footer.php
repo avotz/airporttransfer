@@ -65,18 +65,18 @@
 							<ul class="text-green-100">
 									<li><a href="#" class="">USA PHONE NUMBER: +1-404-448-1729</a></li>
 									<li><a href="#" class="">COSTA RICA: +506-2573-2323 / +506-8704-3690</a></li>
-									<li><a href="mailto::info@airportransfer.com" class="hover:underline">info@airportransfer.com</a></li>
+									<li><a href="mailto::reservation@airporttransfercostarica.com" class="hover:underline">reservation@airporttransfercostarica.com</a></li>
 									
 								</ul>
 						</div>
 						<div class="footer-item w-full md:w-1/3 px-4 md:text-right mb-10">
 							<h3 class="mb-4 uppercase font-medium text-white">More Online</h3>
 							<ul class="flex flex-wrap justify-center md:justify-end text-3xl text-green-100">
-								<li><a href="#" class="p-2"><i class="fab fa-tripadvisor"></i></a></li>
-								<li><a href="#" class="p-2"><i class="fab fa-facebook"></i></a></li>
-								<li><a href="#" class="p-2"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#" class="p-2"><i class="fab fa-instagram"></i></a></li>
-								<li><a href="#" class="p-2"><i class="fab fa-youtube"></i></a></li>
+								<li><a href="https://www.tripadvisor.com/Attraction_Review-g309240-d2102243-Reviews-Guanacaste_Viajes_and_Tours-Liberia_Province_of_Guanacaste.html" class="p-2" target="_blank"><i class="fab fa-tripadvisor"></i></a></li>
+								<li><a href="https://www.facebook.com/GuanacasteViaje" class="p-2"><i class="fab fa-facebook" target="_blank"></i></a></li>
+								<li><a href="https://twitter.com/guanacasteviaje" class="p-2" target="_blank"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="https://www.instagram.com/guanacasteviajes/" class="p-2" target="_blank"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="https://www.youtube.com/channel/UCOMPdeJl_Ft5VvyfMMu2h3g" class="p-2" target="_blank"><i class="fab fa-youtube"></i></a></li>
 								
 							</ul>
 
