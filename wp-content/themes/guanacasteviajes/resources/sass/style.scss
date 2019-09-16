@@ -157,7 +157,9 @@ html{
 	.featured-tours
 	{
 		&-item{
-			
+			&-img{
+				padding-top: 345px;
+			}
 			&-content{
 				min-height: 10em;
 			}
@@ -175,7 +177,7 @@ html{
 	{
 		&-item{
 			&-img{
-				padding-top: 250px;
+				padding-top: 345px;
 			}
 			&-info{
 				

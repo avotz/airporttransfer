@@ -99,7 +99,7 @@ get_header();
 	<section class="featured-tours" >
 		<div class="container mx-auto text-center">
 			<h2 class="text-4xl mb-12 mt-4 relative hasBorder" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Featured Tours</h2>
-			<p class="md:text-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam vel, officiis qui cupiditate, deleniti beatae dolorum ex porro, laboriosam ullam blanditiis! Minus et ducimus, voluptas nisi repudiandae culpa vitae quis?</p>
+			<p class="md:text-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Travelling to Costa Rica is an exciting experience, allowing you to see the beautiful landscape, amazing beaches and vibrant towns and cities.  Here at Guanacaste Viajes & Tours, we want to ensure you have the best possible experience.</p>
 		</div>
 		<div class="flex flex-wrap justify-between mt-8 mx-4">
 			
@@ -238,7 +238,7 @@ get_header();
 	<section class="news pt-10 pb-16">
 			<div class="container mx-auto text-center">
 				<h2 class="text-4xl mb-12 mt-4 relative hasBorder" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Latest From Our Blog</h2>
-				<p class="text-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+				<p class="text-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Find out the most relevant in Costa Rica with Guanacaste Viajes!</p>
 
 				<div class="flex flex-wrap justify-between mt-8">
 				<?php
