@@ -68,7 +68,7 @@
         </div>  
             <div class="hotel-content-sidebar">
                <div class="">
-                    <h2>Airport Transportation</h2>
+                    <h2 class="text-3xl ">Airport Transportation</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12">
@@ -135,7 +135,7 @@
       
         <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12">
-                         <a href="https://airporttransfercostarica.com/reservation-page/" class="move-to-booking">Book Transfer</a>
+                         <a href="https://airporttransfercostarica.com/reservation-page/" class="btn move-to-booking">Book Transfer</a>
                         
                     </div><br>
  <p style="color: #ff6600" align="center" ><strong>Why book with us?</strong></p>
