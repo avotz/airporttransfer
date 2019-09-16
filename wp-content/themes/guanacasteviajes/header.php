@@ -35,7 +35,7 @@
 					)
 				);
 				?>
-			<a href="#reservation-transfer" class="hidden md2:block border-2 border-white hover:border-green-500 bg-green-500 px-6 py-2 text-white hover:bg-white hover:text-green-500">Book Now</a>
+			<a href="<?php echo esc_url(home_url('/reservation-page')); ?>" class="btn-book md2:block border-2 border-white hover:border-green-500 bg-green-500 px-6 py-2 text-white hover:bg-white hover:text-green-500">Book Now</a>
 			<div class="btn-menu absolute text-green-500 z-10 cursor-pointer text-3xl">
 				<i class="fas fa-bars"></i>
 			</div>

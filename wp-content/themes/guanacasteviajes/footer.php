@@ -18,19 +18,54 @@
 						<div class="footer-item w-full md:w-1/3 px-4 md:text-left mb-10">
 							<h3 class="mb-4 uppercase font-medium text-white">Tours</h3>
 							<ul class="text-green-100">
-								<li><a href="#" class="py-1 block">Diamante Adventure Zip Line</a></li>
-								<li><a href="#" class="py-1 block">Manuel Antonio National Park Deluxe</a></li>
-								<li><a href="#" class="py-1 block">Damas Mangrove Boat Tour</a></li>
-								<li><a href="#" class="py-1 block">Vandara Combo Adventure & Hot Spring</a></li>
-								<li><a href="#" class="py-1 block">Arenal Sky Adventure Tour & Tabacon Hot Spring</a></li>
+							<?php
+			
+								$args = array(
+									'post_type' => 'product',
+									//'order' => 'ASC',
+									'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
+									'posts_per_page' => 5,
+									'tax_query' => array(
+										array(
+											'taxonomy' => 'product_cat',
+											'field'    => 'slug',
+											'terms'    => 'best-seller',
+										),
+										
+									)
+
+								);
+
+
+								$items = new WP_Query($args);
+								// Pagination fix
+								$temp_query = $wp_query;
+								$wp_query   = NULL;
+								$wp_query   = $items;
+
+								if ($items->have_posts()) {
+									while ($items->have_posts()) {
+										$items->the_post();
+
+										?>
+									<li><a href="<?php the_permalink(); ?>" class="py-1 block hover:underline"><?php the_title(); ?></a></li>
+									
+									<?php
+
+								}
+								}
+
+								?>
+
 							</ul>
+							<?php wp_reset_postdata(); ?>
 						</div>
 						<div class="footer-item w-full md:w-1/3 px-4 mb-10">
 							<h3 class="mb-4 uppercase font-medium text-white">Contact</h3>
 							<ul class="text-green-100">
-									<li><a href="#">USA PHONE NUMBER: +1-404-448-1729</a></li>
-									<li><a href="#">COSTA RICA: +506-2573-2323 / +506-8704-3690</a></li>
-									<li><a href="#">info@airportransfer.com</a></li>
+									<li><a href="#" class="">USA PHONE NUMBER: +1-404-448-1729</a></li>
+									<li><a href="#" class="">COSTA RICA: +506-2573-2323 / +506-8704-3690</a></li>
+									<li><a href="mailto::info@airportransfer.com" class="hover:underline">info@airportransfer.com</a></li>
 									
 								</ul>
 						</div>
@@ -72,6 +107,35 @@
 		</footer>
 
 <?php wp_footer(); ?>
+
+<script>
+ 
+    var wpcf7ElmInquireTour = document.querySelector( '#tour-popup div.wpcf7' );
+    var wpcf7ElmInquireTransfer = document.querySelector( '.transfer-popup-link' );
+    var wpcf7ElmContact = document.querySelector( '#wpcf7-f45-p23-o1' ); //form contact
+   
+    
+
+      if(wpcf7ElmContact)
+    {
+          wpcf7ElmContact.addEventListener( 'wpcf7submit', function( event ) {
+            ga('send', 'event', 'Contact Form', 'submit');
+        }, false );
+      }
+       if(wpcf7ElmInquireTour)
+    {
+          wpcf7ElmInquireTour.addEventListener( 'wpcf7submit', function( event ) {
+            ga('send', 'event', 'Inquire Tour Form', 'submit');
+        }, false );
+      }
+        if(wpcf7ElmInquireTransfer)
+    {
+          wpcf7ElmInquireTransfer.addEventListener( 'click', function( event ) {
+            ga('send', 'event', 'Book Transfer Button', 'submit');
+        }, false );
+      }
+     
+</script>
 
 </body>
 </html>

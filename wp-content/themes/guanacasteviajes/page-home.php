@@ -88,8 +88,8 @@ get_header();
 		<h2 class="text-4xl mb-12 mt-4 relative hasBorder" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Reservation Transfer</h2>
 		<div class="container mx-auto">
 
-		<!-- <div id="bro_reservation" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"></div>
-		<input id="cid" type="hidden" value="AOKdZADhufaic11ZFe5UWg%3d%3d" /><input id="dbaid" type="hidden" value="PW5zWkTv9KRUJHxtYK4OKQ%3d%3d" /> <script type="text/javascript"> (function () { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://bookridesonline.com/web/reservation.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })(); </script> -->
+		<div id="bro_reservation" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"></div>
+		<input id="cid" type="hidden" value="AOKdZADhufaic11ZFe5UWg%3d%3d" /><input id="dbaid" type="hidden" value="PW5zWkTv9KRUJHxtYK4OKQ%3d%3d" /> <script type="text/javascript"> (function () { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://bookridesonline.com/web/reservation.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })(); </script>
 
 		</div>
 		
@@ -134,8 +134,8 @@ get_header();
 						$items->the_post();
 
 						?>
-
-					<div class="featured-tours-item w-full md:w-1/2 px-2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+					
+					<div class="featured-tours-item w-full px-2 <?php echo (($wp_query->current_post +1) == ($wp_query->post_count)) ? '' : 'md:w-1/2'?>" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
 						<div class="wrapper overflow-hidden relative">
 								<?php if (has_post_thumbnail()) :
 
@@ -147,7 +147,7 @@ get_header();
 							
 								<div class="featured-tours-item-img" style="background-image: url('<?php echo $thumb_url[0] ?>')">
 									<div class="featured-tours-item-content">
-										<div class="featured-tours-item-info text-white text-center absolute inset-x-0 m-auto px-8">
+										<div class="featured-tours-item-info text-white text-center absolute inset-x-0 m-auto px-10">
 											<h3 class="text-3xl md:text-4xl"><?php the_title(); ?></h3>
 											<?php the_excerpt(); ?>
 											<a href="<?php the_permalink(); ?>" class="inline-block px-4 py-2 uppercase">Details <i class="fas fa-angle-right"></i></a>
@@ -181,64 +181,57 @@ get_header();
 		<div class="container mx-auto text-center">
 			<h2 class="text-4xl mb-12 mt-4 relative hasBorder" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">What Our Clients Say</h2>
 			<div class="tripadvisor-slider text-left">
-				<div class="tripadvisor-slide bg-gray-200">
-					<div class="wrapper">
-						<div class="comment mt-12 mx-8 mb-2 ">
-							<p>
-							"We enjoyed the tailor made wine tour with Matt off the beaten tracks with surprising elements a lot and can only recommend it further. Thank you for an unforgettable day!"</p>
-						</div>
-						<div class="date mt-12 mx-8 mb-2 uppercase">
-							June 2019
-						</div>
-						<div class="rate mt-10 mx-8 mb-2 uppercase text-center">
-							<img src="<?php echo get_template_directory_uri();  ?>/img/stars-trip.jpg" alt="">
-						</div>
-					</div>
-				</div>
-				<div class="tripadvisor-slide bg-gray-200">
-						<div class="wrapper">
-							<div class="comment mt-12 mx-8 mb-2">
-								<p>
-								"We enjoyed the tailor made wine tour with Matt off the beaten tracks with surprising elements a lot and can only recommend it further. Thank you for an unforgettable day!"</p>
-							</div>
-							<div class="date mt-12 mx-8 mb-2 uppercase">
-								June 2019
-							</div>
-							<div class="rate mt-10 mx-8 mb-2 uppercase">
-									<img src="<?php echo get_template_directory_uri();  ?>/img/stars-trip.jpg" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="tripadvisor-slide bg-gray-200">
+
+			<?php
+				$args = array(
+					'post_type' => 'testimonial',
+					//'order' => 'ASC',
+					'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
+					'posts_per_page' => 6,
+					
+
+				);
+				
+
+				$items = new WP_Query($args);
+				// Pagination fix
+				$temp_query = $wp_query;
+				$wp_query   = NULL;
+				$wp_query   = $items;
+
+				if ($items->have_posts()) {
+					while ($items->have_posts()) {
+						$items->the_post();
+
+						?>
+						<div class="tripadvisor-slide bg-gray-200">
 							<div class="wrapper">
-								<div class="comment mt-12 mx-8 mb-2">
-									<p>
-									"We enjoyed the tailor made wine tour with Matt off the beaten tracks with surprising elements a lot and can only recommend it further. Thank you for an unforgettable day!"</p>
+								<div class="comment mt-12 mx-8 mb-2 ">
+									<?php the_content(); ?>
 								</div>
 								<div class="date mt-12 mx-8 mb-2 uppercase">
-									June 2019
+								<?php echo rwmb_meta( 'rw_testimonial_date' ); ?>
 								</div>
-								<div class="rate mt-10 mx-8 mb-2 uppercase">
-									<img src="<?php echo get_template_directory_uri();  ?>/img/stars-trip.jpg" alt="">
+								<div class="rate mt-10 mx-8 mb-2 uppercase text-center">
+									<img src="<?php echo get_template_directory_uri();  ?>/img/stars-trip.jpg" alt="stars">
 								</div>
 							</div>
 						</div>
-						<div class="tripadvisor-slide bg-gray-200">
-								<div class="wrapper">
-									<div class="comment mt-12 mx-8 mb-2">
-										<p>
-										"We enjoyed the tailor made wine tour with Matt off the beaten tracks with surprising elements a lot and can only recommend it further. Thank you for an unforgettable day!"</p>
-									</div>
-									<div class="date mt-12 mx-8 mb-2 uppercase">
-										June 2019
-									</div>
-									<div class="rate mt-10 mx-8 mb-2 uppercase">
-										123456
-									</div>
-								</div>
-							</div>
+						
+
+					<?php
+
+
+					}
+				}
+
+				?>
+				</div>
+				<?php wp_reset_postdata(); ?>
+				
+				
 	
-			</div>
+			
 		</div>
 
 	</section>
@@ -248,66 +241,77 @@ get_header();
 				<p class="text-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
 
 				<div class="flex flex-wrap justify-between mt-8">
-					<div class="news-item w-full md:w-1/3 px-2 mb-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+				<?php
+				$args = array(
+					'post_type' => 'post',
+					//'order' => 'ASC',
+					'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
+					'posts_per_page' => 3,
+					
+
+				);
+				
+
+				$items = new WP_Query($args);
+				// Pagination fix
+				$temp_query = $wp_query;
+				$wp_query   = NULL;
+				$wp_query   = $items;
+
+				if ($items->have_posts()) {
+					while ($items->have_posts()) {
+						$items->the_post();
+
+						?>
+						<div class="news-item w-full md:w-1/3 px-2 mb-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
 						<div class="wrapper overflow-hidden relative">
 								
 								<div class="news-item-img relative">
-									<img src="<?php echo get_template_directory_uri();  ?>/img/news-item.jpg" alt="" class="w-full">
-									<a href="#" class="news-item-link inset-0 absolute"></a>
+									<?php if (has_post_thumbnail()) :
+
+									$id = get_post_thumbnail_id($post->ID);
+									$thumb_url = wp_get_attachment_image_src($id, 'large', true);
+									?>
+
+									<?php endif; ?>
+									<img src="<?php echo $thumb_url[0] ?>" alt="<?php the_title(); ?>" class="w-full">
+									<a href="<?php the_permalink(); ?>" class="news-item-link inset-0 absolute"></a>
 								</div>
 								<div class="news-item-category absolute text-white uppercase">
-									Category
+								<?php  $categories_list = get_the_category_list( esc_html__( ', ', 'guanacasteviajes' ) );
+									if ( $categories_list ) {
+										/* translators: 1: list of categories. */
+										printf( '<span class="cat-links">' . esc_html__( '%1$s', 'guanacasteviajes' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+									}
+									?>
 								</div>
 								
 							
 							
 						</div>
 						<div class="news-item-title text-left mt-2 mb-30 relative">
-								<h3 class="text-xl md:text-3xl">Lorem ipsum dolor sit amet consectetur.</h3>
+								<h3 class="text-xl md:text-3xl"><?php the_title(); ?></h3>
 							
 						</div>
 					</div>
-					<div class="news-item w-full md:w-1/3 px-2 mb-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
-						<div class="wrapper overflow-hidden relative">
-								
-								<div class="news-item-img relative">
-									<img src="<?php echo get_template_directory_uri();  ?>/img/news-item.jpg" alt="" class="w-full">
-									<a href="#" class="news-item-link inset-0 absolute"></a>
-								</div>
-								<div class="news-item-category absolute text-white uppercase">
-									Category
-								</div>
-								
-							
-							
-						</div>
-						<div class="news-item-title text-left mt-2 mb-30 relative">
-								<h3 class="text-xl md:text-3xl">Lorem ipsum dolor sit amet consectetur.</h3>
-							
-						</div>
-					</div>
-					<div class="news-item w-full md:w-1/3 px-2 mb-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
-						<div class="wrapper overflow-hidden relative">
-								
-								<div class="news-item-img relative">
-									<img src="<?php echo get_template_directory_uri();  ?>/img/news-item.jpg" alt="" class="w-full">
-									<a href="#" class="news-item-link inset-0 absolute"></a>
-								</div>
-								<div class="news-item-category absolute text-white uppercase">
-									Category
-								</div>
-								
-							
-							
-						</div>
-						<div class="news-item-title text-left mt-2 mb-30 relative">
-								<h3 class="text-xl md:text-3xl">Lorem ipsum dolor sit amet consectetur.</h3>
-							
-						</div>
-					</div>
+
+					
+
+					<?php
+
+
+					}
+				}
+
+				?>
 				</div>
+				<?php the_posts_pagination(array('mid_size' => 2));
+				wp_reset_postdata(); ?>
+
+					
+				
 				<div class="text-center mt-12">
-						<a href="#" class="inline-block px-6 py-2 bg-green-500 uppercase text-white border-2 border-white hover:border-green-500 hover:bg-white hover:text-green-500">View All</a>
+						<a href="<?php echo esc_url(home_url('/news')); ?>" class="inline-block px-6 py-2 bg-green-500 uppercase text-white border-2 border-white hover:border-green-500 hover:bg-white hover:text-green-500">View All</a>
 				</div>
 				
 			</div>

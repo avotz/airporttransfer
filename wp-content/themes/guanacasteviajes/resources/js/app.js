@@ -98,7 +98,7 @@ $('.slider-gallery').slick({
     {
       breakpoint: 768,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
       }
     }
@@ -211,6 +211,7 @@ $('.tour-popup-link').on('click',function (e) {
     var $root = $('html, body');
     $('a.anchor').click(function(e) {
         var href = $.attr(this, 'href');
+       
         if (typeof($(href)) != 'undefined' && $(href).length > 0) {
             var anchor = '';
 
@@ -228,6 +229,8 @@ $('.tour-popup-link').on('click',function (e) {
                 });
                 e.preventDefault();
             }
+        }else{
+            window.location.replace('/' + href);
         }
     });
 

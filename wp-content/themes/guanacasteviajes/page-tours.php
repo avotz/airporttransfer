@@ -223,6 +223,7 @@ get_header(); ?>
 
 									</div>
 								</div>
+								<a href="<?php the_permalink(); ?>" class="absolute inset-0"></a>
 							</article>
 
 

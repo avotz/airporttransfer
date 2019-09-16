@@ -177,7 +177,7 @@ function add_specific_menu_location_atts( $atts, $item, $args ) {
     // check if the item is in the primary menu
     // if( $args->theme_location == 'primary' ) {
       // add the desired attributes:
-      $atts['class'] = 'no-underline text-black px-3 sm:px-2 lg:px-4'; // anchor
+      $atts['class'] = 'no-underline text-black block py-2 px-3 sm:px-2 lg:px-4'; // anchor
    // }
     return $atts;
 }

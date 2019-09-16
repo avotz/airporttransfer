@@ -51,5 +51,21 @@ function guanacasteviajes_register_meta_boxes( $meta_boxes ) {
             ),
         )
     );
+
+    $meta_boxes[] = array(
+        'title'      => __('Additional Information', 'textdomain' ),
+        'post_types' => 'testimonial',
+        'fields'     => array(
+            array(
+                'name' => 'Date',
+                'desc' => '',
+                'id' => $prefix . 'testimonial_date',
+                'type' => 'date',
+                
+
+            ),
+            
+        )
+    );
     return $meta_boxes;
 }

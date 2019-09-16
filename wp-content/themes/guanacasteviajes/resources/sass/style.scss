@@ -21,6 +21,9 @@ License URI:        http://opensource.org/licenses/MIT
 @import "../css/magnific-popup.css";
 @import "../css/select2.min.css";
 //@import '../css/flatpickr.css';
+html{
+	@apply font-sans #{!important};
+}
 .font-titles{
 	font-family: 'Francois One', cursive;
 }
@@ -29,6 +32,15 @@ License URI:        http://opensource.org/licenses/MIT
 }
 .menu{
 	top:70px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: white;
+	display: none;
+	
+	&-ul{
+		margin-bottom: 0 !important;
+	}
 	&.open{
 		display: block;
 	}
@@ -46,6 +58,7 @@ License URI:        http://opensource.org/licenses/MIT
 		}
 
 	}
+	
 }
 .logo{
 	top:120px;
@@ -61,11 +74,29 @@ License URI:        http://opensource.org/licenses/MIT
 	top:15px;
 	right:15px;
 }
-
+.btn-book{
+	position: absolute;
+    right: 0;
+    top: 70px;
+}
 @media screen and (min-width: 900px){
-	
+	.menu{
+		background-color: transparent;
+		position: static;
+		display: block !important;
+
+	}
 	.btn-menu{
 		display: none;
+	}
+
+	
+}
+@media screen and (min-width: 1150px){
+	
+	.btn-book{
+		display: block;
+		position: static;
 	}
 	
 }
@@ -245,7 +276,7 @@ License URI:        http://opensource.org/licenses/MIT
 }
 
 .main{
-	padding-top:4.8rem;
+	padding-top:4.3rem;
 	padding-bottom: 5rem;
 	background-color: #f4f4f4;
 }

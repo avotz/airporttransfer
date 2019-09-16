@@ -6,7 +6,9 @@ $dorado: #cfbd79;
 $azul: #225890;
 $azul2: #5581b1;
 $turquesa: #69aebc;
-
+a{
+	color: inherit !important;
+}
 p{ 
 	margin: 0 0 25px;
     line-height: 30px;
