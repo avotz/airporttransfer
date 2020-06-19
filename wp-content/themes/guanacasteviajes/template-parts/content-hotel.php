@@ -70,80 +70,16 @@
                <div class="">
                     <h2 class="text-3xl ">Airport Transportation</h2>
                 </div>
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12">
-                        <div class="form-group">
-                            <span id="lblTransferType">Transfer Type</span>
-                            <select name="ddlTransferType" id="ddlTransferType" class="form-control">
-								<option value="1" data-type="roundtrip">Round Trip</option>
-								<option value="2" data-type="tohotel">Transfer to Hotel</option>
-								<option value="" data-type="toairport">Transfer to Airport</option>
-
-							</select>
-                        </div>
-                    </div>
-                </div>
-    
-        <div class="row">
-                    <div id="layerAdult" class="col-md-6 col-lg-6 col-sm-12">
-                        <div class="form-group">
-                            <span id="MainContent_lblAdults">Adults</span>
-                            <select name="ddlAdults" id="ddlAdults" class="form-control">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
-
-							</select>
-                        </div>
-                    </div>
-                    <div id="layerChildren" class="col-md-6 col-lg-6 col-sm-12">
-                        <div class="form-group">
-                            <span id="MainContent_lblChildren">Children</span>
-                            <select name="ctl00$ctl00$MainContent$ddlChildren" id="ddlChildren" class="form-control">
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-
-							</select>
-                        </div>
-                    </div>
-                    <div id="layerInfant" class="col-md-4 col-lg-4 col-sm-12 hidden">
-                        <div class="form-group">
-                            <span id="MainContent_lblInfalts">Infants (0-1)</span>
-                            <select name="ctl00$ctl00$MainContent$ddlInfants" id="ddlInfants" class="form-control">
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-
-							</select>
-                        </div>
-                    </div>
-                </div>   <br>
-      
-        <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12">
-                         <a href="https://airporttransfercostarica.com/reservation-page/" class="btn move-to-booking">Book Transfer</a>
-                        
-                    </div><br>
+			<iframe src="https://booking.airporttransfercostarica.com/booking/widget" id="eto-iframe-booking-widget" allow="geolocation" width="100%" height="250" scrolling="no" frameborder="0" style="width:1px; min-width:100%; border:0;">This option will not work correctly. Unfortunately, your browser does not support inline frames.</iframe>
+<script src="https://booking.airporttransfercostarica.com/assets/plugins/iframe-resizer/iframeResizer.min.js"></script>
+<script>iFrameResize({log:false, targetOrigin:'*', checkOrigin:false}, "iframe#eto-iframe-booking-widget");</script>	
+				
  <p style="color: #ff6600" align="center" ><strong>Why book with us?</strong></p>
           <ul class="fa-ul">
-  <li><i class="fa-li fa fa-usd fa-1x" style="color: #ff6600"></i>No hidden cost.</li>
-  <li><i class="fa-li fa fa-check-square" style="color: #ff6600"></i>Instant booking confirmation.</li>
-  <li><i class="fa-li fa fa-check-square" style="color: #ff6600"></i>Best price guarantee.</li>
-  <li><i class="fa-li fa fa-headphones" style="color: #ff6600"></i>Customer care available 24/7.</li> 
+  <li><i class="fa-li fa fa-usd fa-lg" style="color: #ff6600"></i>No hidden cost.</li>
+  <li><i class="fa-li fa fa-check-square fa-lg" style="color: #ff6600"></i>Instant booking confirmation.</li>
+  <li><i class="fa-li fa fa-credit-card fa-lg" style="color: #ff6600"></i>Best price guarantee.</li>
+  <li><i class="fa-li fa fa-headphones fa-lg" style="color: #ff6600"></i>Customer care available 24/7.</li> 
 </ul>        
 <div>
 Our promise is to offer great airport transfer service and superior customer service. If you need to cancel, make changes or help planning your vacation you can count on us to be there by your side.        

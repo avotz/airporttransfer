@@ -92,9 +92,10 @@ get_header();
 		<input id="cid" type="hidden" value="AOKdZADhufaic11ZFe5UWg%3d%3d" /><input id="dbaid" type="hidden" value="PW5zWkTv9KRUJHxtYK4OKQ%3d%3d" /> <script type="text/javascript"> (function () { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://bookridesonline.com/web/reservation.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })(); </script>
 
 		</div> -->
-		<a href="<?php echo esc_url(home_url('/reservation-page')); ?>">
+		 <a href="<?php echo esc_url(home_url('/reservation-page')); ?>">
 		<img class="inline-block" src="<?php echo get_template_directory_uri();  ?>/img/reservation-section.jpg" alt="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-		</a>
+		</a> 
+		<?php/* echo do_shortcode("[easytaxioffice type='booking-widget']"); */?>
 		
 	</section>
 	<section class="featured-tours" >
