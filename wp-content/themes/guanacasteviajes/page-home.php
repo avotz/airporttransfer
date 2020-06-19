@@ -16,7 +16,7 @@ get_header();
 ?>
 
 <section class="banner relative z-0">
-		<div class="banner-mini-booking absolute top-0 right-0 hidden lg:block w-1/2 z-10">
+		<div class="banner-mini-booking absolute top-0 right-0 hidden lg:block w-1/3 z-10">
 			<iframe src="https://booking.airporttransfercostarica.com/booking/widget" id="eto-iframe-booking-widget" allow="geolocation" width="100%" height="250" scrolling="no" frameborder="0" style="width:1px; min-width:100%; border:0;">This option will not work correctly. Unfortunately, your browser does not support inline frames.</iframe>
 			<script src="https://booking.airporttransfercostarica.com/assets/plugins/iframe-resizer/iframeResizer.min.js"></script>
 			<script>iFrameResize({log:false, targetOrigin:'*', checkOrigin:false}, "iframe#eto-iframe-booking-widget");</script>
