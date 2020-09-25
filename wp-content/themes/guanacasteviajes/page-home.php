@@ -155,7 +155,7 @@ get_header();
 								<div class="featured-tours-item-img" style="background-image: url('<?php echo $thumb_url[0] ?>')">
 									<div class="featured-tours-item-content">
 										<div class="featured-tours-item-info text-white text-center absolute inset-x-0 m-auto px-10">
-											<h3 class="text-3xl md:text-4xl"><?php the_title(); ?></h3>
+											<h3 class="text-3xl md:text-4xl text-white"><?php the_title(); ?></h3>
 											<?php the_excerpt(); ?>
 											<a href="<?php the_permalink(); ?>" class="inline-block px-4 py-2 uppercase">Details <i class="fas fa-angle-right"></i></a>
 										</div>
@@ -297,7 +297,7 @@ get_header();
 							
 						</div>
 						<div class="news-item-title text-left mt-2 mb-30 relative">
-								<h3 class="text-xl md:text-3xl"><?php the_title(); ?></h3>
+								<h3 class="text-xl md:text-3xl text-black"><?php the_title(); ?></h3>
 							
 						</div>
 					</div>
