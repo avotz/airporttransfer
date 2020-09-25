@@ -14,90 +14,26 @@
 
 get_header();
 ?>
-
 <section class="banner relative z-0">
 		<div class="banner-mini-booking absolute top-0 right-0 hidden lg:block w-1/3 z-10">
 			<iframe src="https://booking.airporttransfercostarica.com/booking/widget" id="eto-iframe-booking-widget" allow="geolocation" width="100%" height="250" scrolling="no" frameborder="0" style="width:1px; min-width:100%; border:0;">This option will not work correctly. Unfortunately, your browser does not support inline frames.</iframe>
 			<script src="https://booking.airporttransfercostarica.com/assets/plugins/iframe-resizer/iframeResizer.min.js"></script>
 			<script>iFrameResize({log:false, targetOrigin:'*', checkOrigin:false}, "iframe#eto-iframe-booking-widget");</script>
 		</div>
-		<div class="banner-slider">
+	<div class="banner-slider">
+				<?php echo do_shortcode('[metaslider id="30813"]'); ?>
 
-		<?php
-
-						
-			$args = array(
-				'post_type' => 'product',
-				//'order' => 'ASC',
-				'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
-				'posts_per_page' => 5,
-				'tax_query' => array(
-					array(
-						'taxonomy' => 'product_cat',
-						'field'    => 'slug',
-						'terms'    => 'combo-tours',
-					),
-					
-				)
-
-			);
-
-
-			$items = new WP_Query($args);
-			// Pagination fix
-			$temp_query = $wp_query;
-			$wp_query   = NULL;
-			$wp_query   = $items;
-
-			if ($items->have_posts()) {
-				while ($items->have_posts()) {
-					$items->the_post();
-
-					?>
-
-					<?php if (has_post_thumbnail()) :
-
-					$id = get_post_thumbnail_id($post->ID);
-					$thumb_url = wp_get_attachment_image_src($id, 'large', true);
-					?>
-
-					<?php endif; ?>
-
-				<div class="banner-slide w-full h-screen" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/pattern.png'), url('<?php echo $thumb_url[0] ?>')">
-				<div class="banner-info flex w-full h-screen justify-center  items-center">
-					<div class="banner-title text-center">
-							<h2 class="text-3xl md:text-5xl text-white mb-4"><?php the_title(); ?></h2>
-							<a href="<?php the_permalink(); ?>" class="inline-block px-4 py-3 bg-green-500 uppercase text-white hover:bg-white hover:text-green-500">View details</a>
-					</div>
-					
-
-				</div>
-			</div>
-
-				
-
-				<?php
-
-
-			}
-			}
-
-			?>
-
-
-		
-			
-		</div> 
+		</div>
 	</section>
 	<section id="reservation-transfer" class="reservation-transfer text-center py-8 " >
-		<h2 class="text-4xl mb-12 mt-4 relative hasBorder" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Reservation Transfer</h2>
+		<h2 class="text-4xl mb-12 mt-4 relative hasBorder" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Book your Airport Transfer Here</h2>
 		<div class="container mx-auto">
 
 		<!-- <div id="bro_reservation" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"></div>
 		<input id="cid" type="hidden" value="AOKdZADhufaic11ZFe5UWg%3d%3d" /><input id="dbaid" type="hidden" value="PW5zWkTv9KRUJHxtYK4OKQ%3d%3d" /> <script type="text/javascript"> (function () { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://bookridesonline.com/web/reservation.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })(); </script>
 
 		</div> -->
-		 <a href="<?php echo esc_url(home_url('/reservation-page')); ?>">
+		 <a href="<?php echo esc_url(home_url('/book-now')); ?>">
 		<img class="inline-block" src="<?php echo get_template_directory_uri();  ?>/img/reservation-section.jpg" alt="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
 		</a> 
 		<?php/* echo do_shortcode("[easytaxioffice type='booking-widget']"); */?>
@@ -329,10 +265,11 @@ get_header();
 				<div class="flex flex-wrap justify-between max-w-lg mx-auto items-center">
 					<div class="logos-item w-1/2 md:w-1/4 px-4">
 					<a href="https://www.tripadvisor.com/Attraction_Review-g309240-d2102243-Reviews-Guanacaste_Viajes_and_Tours-Liberia_Province_of_Guanacaste.html" target="_blank">
-						<img src="<?php echo get_template_directory_uri();  ?>/img/2019-trip-advisor-certificate-of-excellence-big-green-airporttransfer.png" alt="" class="w-full">
+						<img src="<?php echo get_template_directory_uri();  ?>/img/TC_2020_L_WHITE_BG_CMYK-256x301-f306522.png?_t=1599534873.png" alt="" class="w-full">
 					</a>
 						
 					</div>
+						
 					<div class="logos-item w-1/2 md:w-1/4 px-4">
 					<span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=SfhxEla2LlXOtSRrRy4MxCTCLdcbWU1teGmbuzj3igJ88v7tKMNen9YEmMFj"></script></span>
 							<!-- <img src="<?php echo get_template_directory_uri();  ?>/img/siteseal_gd_3_h_d_m.gif" alt="" class="w-full"> -->
