@@ -21,9 +21,10 @@ get_header();
 			<script>iFrameResize({log:false, targetOrigin:'*', checkOrigin:false}, "iframe#eto-iframe-booking-widget");</script>
 		</div>
 	<div class="banner-slider">
-				<?php echo do_shortcode('[metaslider id="30813"]'); ?>
 
-		</div>
+	<?php echo do_shortcode('[metaslider id="30813"]'); ?>
+			
+		</div> 
 	</section>
 	<section id="reservation-transfer" class="reservation-transfer text-center py-8 " >
 		<h2 class="text-4xl mb-12 mt-4 relative hasBorder" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Book your Airport Transfer Here</h2>
