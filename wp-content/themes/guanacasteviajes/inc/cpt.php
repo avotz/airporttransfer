@@ -7,7 +7,7 @@ function guanacasteviajes_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'id'         => 'additional',
         'title'      => __( 'Additional Information', 'textdomain' ),
-        'post_types' => array( 'hotel'),
+        'post_types' => array( 'hotel', 'booking-hotel'),
         'context'    => 'normal',
         'priority'   => 'high',
         'fields' => array(
