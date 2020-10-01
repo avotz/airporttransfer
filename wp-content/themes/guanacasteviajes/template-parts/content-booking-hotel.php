@@ -66,7 +66,7 @@
                 ?>
             </div>
             <div class="hotel-content-sidebar">
-
+                
             </div><!-- .entry-content -->
         </div>
 

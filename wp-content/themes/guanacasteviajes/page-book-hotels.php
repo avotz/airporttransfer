@@ -96,7 +96,7 @@ get_header(); ?>
 									<div class="price">
 										<span class="from">From</span><span>
 											<?php
-
+  												echo rwmb_meta('rw_price_from');
 									// 		$currency = get_woocommerce_currency_symbol();
 
 									// 		$product = new WC_Product($post->ID);
