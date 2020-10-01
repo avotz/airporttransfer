@@ -220,7 +220,7 @@ get_header(); ?>
 												</h4>
 											</div>
 											<div class="rating">
-												<?php if (function_exists("kk_star_ratings")) : echo kk_star_ratings();
+												<?php if (function_exists("kk_star_ratings")) : echo kk_star_ratings($post->ID);
 												endif; ?>
 											</div>
 											<div class="price">
