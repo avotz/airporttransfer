@@ -96,20 +96,12 @@ get_header(); ?>
 									<div class="price">
 										<span class="from">From</span><span>
 											<?php
-  												echo rwmb_meta('rw_price_from');
-									// 		$currency = get_woocommerce_currency_symbol();
+  											
+											$currency = get_woocommerce_currency_symbol();
+								
+											echo $currency;
 
-									// 		$product = new WC_Product($post->ID);
-									// 		/*echo $product->get_price_html();
-                                      
-                                    //  woocommerce_template_loop_price(); */
-									// 		echo $currency;
-
-									// 		if (get_post_meta(get_the_ID(), '_wc_display_cost', true))
-									// 			echo get_post_meta(get_the_ID(), '_wc_display_cost', true);
-									// 		else
-									// 			echo get_post_meta(get_the_ID(), '_wc_booking_cost', true)
-
+											echo rwmb_meta('rw_price_from');
 											?>
 										</span>
 									</div>
