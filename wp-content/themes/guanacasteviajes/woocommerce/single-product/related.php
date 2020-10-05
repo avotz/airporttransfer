@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $related_products ) : ?>
 
-	<?php if (is_product() && has_term('Tour', 'product_cat')) : ?>
+	<?php if (is_product() && has_term('Tour', 'type')) : ?>
 
 		<section class="related products ">
 
