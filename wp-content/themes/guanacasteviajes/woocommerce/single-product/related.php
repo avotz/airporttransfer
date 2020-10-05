@@ -22,27 +22,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $related_products ) : ?>
 
-	<section class="related products ">
+	<?php if (is_product() && has_term('Tour', 'product_cat')) : ?>
 
-		<h2><?php esc_html_e( 'Related tours', 'woocommerce' ); ?></h2>
+		<section class="related products ">
 
-		<?php woocommerce_product_loop_start(); ?>
+			<h2><?php esc_html_e( 'Related tours', 'woocommerce' ); ?></h2>
 
-			<?php foreach ( $related_products as $related_product ) : ?>
+			<?php woocommerce_product_loop_start(); ?>
 
-				<?php
-				 	$post_object = get_post( $related_product->get_id() );
+				<?php foreach ( $related_products as $related_product ) : ?>
 
-					setup_postdata( $GLOBALS['post'] =& $post_object );
+					<?php
+						$post_object = get_post( $related_product->get_id() );
 
-					wc_get_template_part( 'content', 'product' ); ?>
+						setup_postdata( $GLOBALS['post'] =& $post_object );
 
-			<?php endforeach; ?>
+						wc_get_template_part( 'content', 'product' ); ?>
 
-		<?php woocommerce_product_loop_end(); ?>
+				<?php endforeach; ?>
 
-	</section>
+			<?php woocommerce_product_loop_end(); ?>
 
+		</section>
+	<?php endif; ?>
 <?php endif;
 
 wp_reset_postdata();
