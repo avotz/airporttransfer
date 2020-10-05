@@ -54,9 +54,10 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 		</figure>
 		
 	</div>
-
-	<div id="slider-gallery" class="slider-gallery owl-carousel">
-		<?php do_action( 'woocommerce_product_thumbnails' ); ?>
-	</div>
+	<?php if (!has_term('Rooms', 'type')) : ?>
+		<div id="slider-gallery" class="slider-gallery owl-carousel">
+			<?php do_action( 'woocommerce_product_thumbnails' ); ?>
+		</div>
+	<?php endif ?>
     <?php woocommerce_get_template( 'single-product/title.php' ); ?>
 </div>
