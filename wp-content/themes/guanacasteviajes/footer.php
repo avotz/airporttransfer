@@ -66,6 +66,7 @@
 									<li><a href="#" class="">USA PHONE NUMBER: +1-404-448-1729</a></li>
 									<li><a href="#" class="">COSTA RICA: +506-2573-2323 / +506-8704-3690</a></li>
 									<li><a href="mailto::reservation@airporttransfercostarica.com" class="hover:underline">reservation@airporttransfercostarica.com</a></li>
+									<li><a href="#" class="">75 north from Sea Wonder Academy, Sardinal, Carrillo, Guanacaste</a></li>
 									
 								</ul>
 						</div>
@@ -98,9 +99,11 @@
 										<img src="<?php echo get_template_directory_uri();  ?>/img/logo-white.png" alt="" class="inline-block">
 									</div>
 									<div class="footer-item w-full md:w-1/3 px-4">
-										<p>Copyright &copy; 2019</p>
+										<p>Copyright &copy; 2016-2020</p>
+
+										
 									</div>
-									<div class="footer-item w-full md:w-1/3 px-4 md:text-right">
+																			<div class="footer-item w-full md:w-1/3 px-4 md:text-right">
 										Avotz Web Works
 		
 									</div>
