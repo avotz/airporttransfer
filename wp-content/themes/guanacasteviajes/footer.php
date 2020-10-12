@@ -80,8 +80,8 @@
 								<li><a href="https://www.youtube.com/channel/UCOMPdeJl_Ft5VvyfMMu2h3g" class="p-2" target="_blank"><i class="fab fa-youtube"></i></a></li>
 								
 							</ul>
-							<p class="mt-4 mb-0 font-bold text-white pr-4"> Download our app</p>
-							<div class="text-right">
+							<p class="mt-4 mb-0 font-bold text-white md:pr-4"> Download our app</p>
+							<div class="text-center md:text-right">
 								<a href='https://play.google.com/store/apps/details?id=com.airporttransfercostarica.customer&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' class="inline-block w-64"><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' class="w-full" /></a>
 								<a href="https://apps.apple.com/us/app/airport-transfer-costa-rica/id1502320287?ls=1" class="inline-block w-64 px-4"><img src="<?php echo get_template_directory_uri();  ?>/img/Download_on_the_App_Store_Badge.svg" alt="App Store Link" class="w-full"></a>
 							</div>
