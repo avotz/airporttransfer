@@ -79,6 +79,11 @@
 								<li><a href="https://www.youtube.com/channel/UCOMPdeJl_Ft5VvyfMMu2h3g" class="p-2" target="_blank"><i class="fab fa-youtube"></i></a></li>
 								
 							</ul>
+							<h3 class="mb-4 font-bold"> Download our app</h3>
+							<div>
+								<a href='https://play.google.com/store/apps/details?id=com.airporttransfercostarica.customer&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
+								<a href="https://apps.apple.com/us/app/airport-transfer-costa-rica/id1502320287?ls=1"><img src="<?php echo get_template_directory_uri();  ?>/img/Download_on_the_App_Store_Badge.png" alt="App Store Link"></a>
+							</div>
 							
 
 						</div>
