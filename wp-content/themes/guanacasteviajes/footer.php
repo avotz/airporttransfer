@@ -115,6 +115,19 @@
 
 		</footer>
 
+		<div id="tour-popup" class="request-popup white-popup mfp-hide mfp-with-anim">	
+			<h2>Inquire for Tour</h2>	
+			<?php echo do_shortcode('[contact-form-7 id="90" title="Contact Tour"]'); ?>	
+
+
+		</div>	
+		<div id="hotel-popup" class="request-popup white-popup mfp-hide mfp-with-anim">	
+			<h2>Inquire for hotel transportation</h2>	
+			<?php echo do_shortcode('[contact-form-7 id="2141" title="Hotel Transportation form"]'); ?>	
+
+
+		</div>
+
 <?php wp_footer(); ?>
 
 <script>
