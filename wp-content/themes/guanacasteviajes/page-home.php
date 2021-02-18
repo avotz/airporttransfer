@@ -129,9 +129,9 @@ get_header();
 			<?php
 				$args = array(
 					'post_type' => 'testimonial',
-					//'order' => 'ASC',
-					'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
-					'posts_per_page' => 6,
+					//'order' => 'DESC',
+					'orderby' => array('menu_order' => 'ASC', 'post_date' => 'DESC'),
+					'posts_per_page' => 12,
 					
 
 				);
@@ -270,11 +270,15 @@ get_header();
 					</a>
 						
 					</div>
-						
+					
 					<div class="logos-item w-1/2 md:w-1/4 px-4">
-					<span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=SfhxEla2LlXOtSRrRy4MxCTCLdcbWU1teGmbuzj3igJ88v7tKMNen9YEmMFj"></script></span>
-							<!-- <img src="<?php echo get_template_directory_uri();  ?>/img/siteseal_gd_3_h_d_m.gif" alt="" class="w-full"> -->
-						</div>
+					<a href=" " target="_blank">
+						<img src="<?php echo get_template_directory_uri();  ?>/img/WTTC-SafeTravels-Stamp-Template.jpg" alt="" class="w-full">
+					</a>
+						
+					</div>
+					
+					
 						<div class="logos-item w-1/2 md:w-1/4 px-4">
 							<img src="<?php echo get_template_directory_uri();  ?>/img/visa-mastercard-amex-discover-icon.png" alt="" class="w-full">
 						</div>
