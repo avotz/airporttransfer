@@ -163,7 +163,7 @@ get_header(); ?>
 						$dateTimeEnd   = new DateTime('2021-04-12 23:00:00');
 
 						// Get all Bookings in Range
-						$bookings = WC_Bookings_Controller::get_bookings_in_date_range(
+						$bookings = WC_Bookings_Controller::get_bookings_in_date_range_query(
 								$dateTimeStart->getTimestamp(),
 								$dateTimeEnd->getTimestamp(),
 								'',
