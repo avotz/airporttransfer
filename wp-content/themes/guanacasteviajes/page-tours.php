@@ -245,7 +245,7 @@ get_header(); ?>
 													</span>
 												</div>
 												<div>
-												<span class="from"><i class="fas fa-clock"></i></span> <span><?php echo get_post_meta(get_the_ID(), 'duration', true);?></span>
+													<span class="from"><i class="fas fa-clock"></i> Duration</span> <span><?php echo get_post_meta(get_the_ID(), 'duration', true);?></span>
 												</div>
 												
 											</div>
