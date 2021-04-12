@@ -249,7 +249,7 @@ get_header(); ?>
 												</div>
 												
 											</div>
-											<?php echo json_encode(get_post_meta(get_the_ID(), '_wc_booking_availability', true));?>
+											<?php /*echo json_encode(get_post_meta(get_the_ID(), '_wc_booking_availability', true));*/?>
 										</div>
 
 									</div>
