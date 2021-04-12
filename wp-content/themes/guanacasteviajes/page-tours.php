@@ -249,6 +249,7 @@ get_header(); ?>
 												</div>
 												
 											</div>
+											<?php echo get_post_meta(get_the_ID(), '_wc_booking_availability', true);?>
 										</div>
 
 									</div>
