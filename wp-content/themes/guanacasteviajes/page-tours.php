@@ -157,7 +157,26 @@ get_header(); ?>
 
 						);
 					} else {
+
+						// Creating DateTime() objects from the input data.
+						$dateTimeStart = new DateTime('2001-04-12 00:00:00');
+						$dateTimeEnd   = new DateTime('2001-04-12 23:00:00');
+
+						// Get all Bookings in Range
+						$bookings = WC_Bookings_Controller::get_bookings_in_date_range(
+								$dateTimeStart->getTimestamp(),
+								$dateTimeEnd->getTimestamp(),
+								'',
+								false
+							);
+							
+						// Build Array of all the Booked Products for the given Date-Time interval.
+						$exclude[] = 0;
+						foreach ($bookings as $booking) {
+						$exclude[] = $booking->product_id;
+						}
 						$args = array(
+							'post__not_in'  => $exclude,
 							'post_type' => 'product',
 							//'order' => 'ASC',
 							'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
