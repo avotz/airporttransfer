@@ -169,7 +169,8 @@ get_header(); ?>
 								'',
 								false
 							);
-							var_dump($bookings);
+							$buffer_days = WC_Bookings_Controller::find_buffer_day_blocks( 179 );
+							var_dump($buffer_days);
 						// Build Array of all the Booked Products for the given Date-Time interval.
 						$exclude[] = 0;
 						foreach ($bookings as $booking) {
