@@ -167,7 +167,7 @@ get_header(); ?>
 								$dateTimeStart->getTimestamp(),
 								$dateTimeEnd->getTimestamp(),
 								'',
-								false
+								true
 							);
 							
 						// Build Array of all the Booked Products for the given Date-Time interval.
