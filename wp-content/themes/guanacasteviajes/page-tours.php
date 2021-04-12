@@ -169,7 +169,7 @@ get_header(); ?>
 								'',
 								false
 							);
-							
+							var_dump($bookings);
 						// Build Array of all the Booked Products for the given Date-Time interval.
 						$exclude[] = 0;
 						foreach ($bookings as $booking) {
