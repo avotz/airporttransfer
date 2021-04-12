@@ -158,24 +158,23 @@ get_header(); ?>
 						);
 					} else {
 
-						// Creating DateTime() objects from the input data.
-						$dateTimeStart = new DateTime('2021-04-12 00:00:00');
-						$dateTimeEnd   = new DateTime('2021-04-12 23:00:00');
+						// // Creating DateTime() objects from the input data.
+						// $dateTimeStart = new DateTime('2021-04-12 00:00:00');
+						// $dateTimeEnd   = new DateTime('2021-04-12 23:00:00');
 
-						// Get all Bookings in Range
-						$bookings = WC_Bookings_Controller::get_bookings_in_date_range(
-								$dateTimeStart->getTimestamp(),
-								$dateTimeEnd->getTimestamp(),
-								'',
-								false
-							);
-							$buffer_days = WC_Bookings_Controller::find_buffer_day_blocks( 179 );
-							var_dump($buffer_days);
-						// Build Array of all the Booked Products for the given Date-Time interval.
-						$exclude[] = 0;
-						foreach ($bookings as $booking) {
-						$exclude[] = $booking->product_id;
-						}
+						// // Get all Bookings in Range
+						// $bookings = WC_Bookings_Controller::get_bookings_in_date_range(
+						// 		$dateTimeStart->getTimestamp(),
+						// 		$dateTimeEnd->getTimestamp(),
+						// 		'',
+						// 		false
+						// 	);
+						
+						// // Build Array of all the Booked Products for the given Date-Time interval.
+						// $exclude[] = 0;
+						// foreach ($bookings as $booking) {
+						// $exclude[] = $booking->product_id;
+						// }
 						//var_dump($exclude);
 						$args = array(
 							'post__not_in'  => $exclude,
