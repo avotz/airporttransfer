@@ -167,7 +167,7 @@ get_header(); ?>
 								$dateTimeStart->getTimestamp(),
 								$dateTimeEnd->getTimestamp(),
 								'',
-								true
+								false
 							);
 							
 						// Build Array of all the Booked Products for the given Date-Time interval.
@@ -175,7 +175,7 @@ get_header(); ?>
 						foreach ($bookings as $booking) {
 						$exclude[] = $booking->product_id;
 						}
-						var_dump($exclude);
+						//var_dump($exclude);
 						$args = array(
 							'post__not_in'  => $exclude,
 							'post_type' => 'product',
