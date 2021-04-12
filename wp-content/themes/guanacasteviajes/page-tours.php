@@ -224,24 +224,30 @@ get_header(); ?>
 												endif; ?>
 											</div>
 											<div class="price">
-												<span class="from">From</span><span>
-													<?php
+												<div>
+													<span class="from">From</span><span>
+														<?php
 
-													$currency = get_woocommerce_currency_symbol();
+														$currency = get_woocommerce_currency_symbol();
 
-													$product = new WC_Product($post->ID);
-													/*echo $product->get_price_html();
-                                      
-                                     woocommerce_template_loop_price(); */
-													echo $currency;
+														$product = new WC_Product($post->ID);
+														/*echo $product->get_price_html();
+										
+										woocommerce_template_loop_price(); */
+														echo $currency;
 
-													if (get_post_meta(get_the_ID(), '_wc_display_cost', true))
-														echo get_post_meta(get_the_ID(), '_wc_display_cost', true);
-													else
-														echo get_post_meta(get_the_ID(), '_wc_booking_cost', true)
+														if (get_post_meta(get_the_ID(), '_wc_display_cost', true))
+															echo get_post_meta(get_the_ID(), '_wc_display_cost', true);
+														else
+															echo get_post_meta(get_the_ID(), '_wc_booking_cost', true)
 
-														?>
-												</span>
+															?>
+													</span>
+												</div>
+												<div>
+												<span class="from"><i class="fas fa-clock"></i></span> <span><?php echo get_post_meta(get_the_ID(), 'duration', true);?></span>
+												</div>
+												
 											</div>
 										</div>
 
