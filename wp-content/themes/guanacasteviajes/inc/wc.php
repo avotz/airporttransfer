@@ -242,3 +242,108 @@ function my_custom_checkout_field_display_admin_order_meta($order)
   echo '<p><strong>' . __('Pick up location') . ':</strong> ' . get_post_meta($order->id, 'Pick up location', true) . '</p>';
   //*echo '<p><strong>'.__('Tour date').':</strong> ' . get_post_meta( $order->id, 'Tour date', true ) . '</p>';**/
 }
+
+
+/**
+     * Get all available booking products
+     *
+     * @param string $start_date_raw YYYY-MM-DD format
+     * @param string $end_date_raw YYYY-MM-DD format
+     * @param int $quantity Number of people to book
+     * @param string $behavior Whether to return exact matches
+     * @return array Available post IDs
+     */
+    function get_available_bookings( $start_date_raw, $end_date_raw, $quantity = 1, $behavior = 'default' ) {
+      $matches = array();
+     
+      // Separate dates from times
+      $start_date = explode( ' ', $start_date_raw );
+      $end_date = explode( ' ', $end_date_raw );
+
+
+      // If time wasn't passed, define defaults.
+      if ( ! isset( $start_date[1] ) ) {
+          $start_date[1] = '00:00';
+      }
+
+      $start = explode( '-', $start_date[0] );
+
+
+      $args = array(
+          'wc_bookings_field_resource' => 0,
+          'wc_bookings_field_persons' => $quantity,
+          'wc_bookings_field_duration' => 1,
+          'wc_bookings_field_start_date_year' => $start[0],
+          'wc_bookings_field_start_date_month' => $start[1],
+          'wc_bookings_field_start_date_day' => $start[2],
+      );
+
+  
+    $productsIds = get_posts( array(
+        'post_type'      => 'product',
+        'posts_per_page' => -1,
+        'fields'      => 'ids'
+
+      ));
+
+      // Loop through all posts
+      foreach ( $productsIds as $post_id ) {
+          
+          if ( 'product' == get_post_type( $post_id ) ) {
+              $product = wc_get_product( $post_id );
+
+              if ( is_wc_booking_product( $product ) ) {
+
+                  // Grab the duration unit
+                  $unit = $product->is_type( 'accommodation-booking' ) ? 'night' : $product->get_duration_unit();
+
+
+                  // Support time
+                  if ( in_array( $unit, array( 'minute', 'hour' ) ) ) {
+                      if ( ! empty( $start_date[1] ) ) {
+                          $args['wc_bookings_field_start_date_time'] = $start_date[1];
+                      }
+                  }
+
+                  // if ( 'exact' === $behavior ) {  
+                  //     $duration = $this->calculate_duration( $start_date_raw, $end_date_raw, $product->get_duration(), $unit );        
+                  //     $args['wc_bookings_field_duration'] = $duration;
+                  // }
+
+                  $booking_form = new WC_Booking_Form( $product );
+                  $posted_data = $booking_form->get_posted_data( $args );
+
+                  // All slots are available (exact match)
+                  if ( true === $booking_form->is_bookable( $posted_data ) ) {
+                      $matches[] = $post_id;
+                  }
+
+                  // Any slot between the given dates are available
+                  elseif ( 'exact' !== $behavior ) {
+                      $from = strtotime( $start_date_raw );
+                      $to = strtotime( $end_date_raw );
+
+                      $blocks_in_range = $booking_form->product->get_blocks_in_range( $from, $to );
+
+                      // Arguments changed in WC Bookings 1.11.1
+                      $available_blocks = $booking_form->product->get_available_blocks( array(
+                          'blocks' => $blocks_in_range,
+                          'from' => $from,
+                          'to' => $to
+                      ) );
+
+
+                      foreach ( $available_blocks as $check ) { 
+                          if ( true === $booking_form->product->check_availability_rules_against_date( $check, '' )){
+                                  $matches[] = $post_id;
+                                  break; // check passed
+                              }
+                          }
+                      }             
+
+              }
+          }
+      }
+
+      return $matches;
+  }

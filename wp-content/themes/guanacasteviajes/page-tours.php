@@ -24,7 +24,9 @@ $locations = get_terms(array(
 ));
 
 $categorySelected = get_query_var('product_cat');
-$locationSelected = get_query_var('location');
+//$locationSelected = get_query_var('location');
+$dateStart = get_query_var('dateStart');
+$dateEnd = get_query_var('dateEnd');
 $q = get_query_var('q');
 
 get_header(); ?>
@@ -44,9 +46,9 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
 		<div class="tours-filters">
-			<form method="get" action="<?php echo esc_url(home_url('/tours/?product_cat=' . $categorySelected . '&location=' . $locationSelected.'&q=' . $q)); ?>" class="form-filters-tour">
+			<form method="get" action="<?php echo esc_url(home_url('/tours/?product_cat=' . $categorySelected . '&dateStart=' . $dateStart.'&dateEnd=' . $dateEnd.'&q=' . $q)); ?>" class="form-filters-tour">
 
-				<div class="form-filters-tour-item">
+				<!-- <div class="form-filters-tour-item">
 					<label for="location">Pick up Location
 						?</label>
 					<select name="location" id="location" style="width: 100%">
@@ -55,7 +57,18 @@ get_header(); ?>
 							<option value="<?php echo $loc->slug ?>" <?php if ($locationSelected == $loc->slug) echo 'selected' ?>><?php echo $loc->name ?></option>
 						<?php endforeach; ?>
 					</select>
+				</div> -->
+				<div class="form-filters-tour-item flex">
+					<div class="w-1/2 mr-2">
+						<label for="dateStart">Date Start </label>
+						<input type="date" name="dateStart" value="<?php echo $dateStart ?>" />
+					</div>
+					<div class="w-1/2">
+						<label for="dateStart">Date End </label>
+						<input type="date" name="dateEnd" value="<?php echo $dateEnd ?>" />
+					</div>
 				</div>
+				
 				<div class="form-filters-tour-item">
 					<label for="location">Choose your type of Tour</label>
 					<select name="product_cat" id="product_cat" style="width: 100%">
@@ -65,9 +78,15 @@ get_header(); ?>
 						<?php endforeach; ?>
 					</select>
 				</div>
-				<div class="form-filters-tour-item">
-					<label for="location">Keyword Search</label>
-					<input type="text" name="q" placeholder="Adventure, river..." value="<?php echo $q ?>"">
+				<div class="form-filters-tour-item flex items-end">
+					<div class="w-3/4 mr-2">
+						<label for="location">Keyword Search</label>
+						<input type="text" name="q" placeholder="Adventure, river..." value="<?php echo $q ?>" />
+					</div>
+					<div class="w-1/4">
+						<button type="submit" class="block bg-green-500 px-6 py-2 text-white hover:bg-white hover:text-green-500">Search</button>
+					</div>
+					
 				</div>
 			</form>
 
@@ -79,126 +98,63 @@ get_header(); ?>
 
 					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-					if ($categorySelected && $locationSelected) {
-						$args = array(
-							'post_type' => 'product',
-							//'order' => 'ASC',
-							'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
-							'posts_per_page' => 12,
-							'paged' => $paged,
-							's' => $q,
-							'tax_query' => array(
-								'relation' => 'AND',
-								array(
-									'taxonomy' => 'type',
-									'field'    => 'slug',
-									'terms'    => 'tour',
-								),
-								array(
-									'taxonomy' => 'product_cat',
-									'field'    => 'slug',
-									'terms'    => $categorySelected,
-								),
-								array(
-									'taxonomy' => 'location',
-									'field'    => 'slug',
-									'terms'    => $locationSelected,
+					$args = array(
+						'post_type' => 'product',
+						//'order' => 'ASC',
+						'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
+						'posts_per_page' => 12,
+						'paged' => $paged,
+						's' => $q
+					);
 
-								),
-							)
+					// Creating DateTime() objects from the input data.
+					if($dateStart && $dateEnd){
+						$dateTimeStart = new DateTime($dateStart);
+						$dateTimeEnd   = new DateTime($dateEnd);
+	
+						$availableBookings = get_available_bookings($dateTimeStart->format('Y-m-d H:i:s'), $dateTimeEnd->format('Y-m-d H:i:s'));
 
-						);
-					} elseif ($categorySelected) {
-						$args = array(
-							'post_type' => 'product',
-							//'order' => 'ASC',
-							'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
-							'posts_per_page' => 12,
-							'paged' => $paged,
-							's' => $q,
-							'tax_query' => array(
-								'relation' => 'AND',
-								array(
-									'taxonomy' => 'type',
-									'field'    => 'slug',
-									'terms'    => 'tour',
-								),
-								array(
-									'taxonomy' => 'product_cat',
-									'field'    => 'slug',
-									'terms'    => $categorySelected,
-								),
+						if(count($availableBookings)){
+							$args['post__in'] = $availableBookings;
+						}
 
-							)
-
-						);
-					} elseif ($locationSelected) {
-						$args = array(
-							'post_type' => 'product',
-							//'order' => 'ASC',
-							'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
-							'posts_per_page' => 12,
-							'paged' => $paged,
-							's' => $q,
-							'tax_query' => array(
-								'relation' => 'AND',
-								array(
-									'taxonomy' => 'type',
-									'field'    => 'slug',
-									'terms'    => 'tour',
-								),
-								array(
-									'taxonomy' => 'location',
-									'field'    => 'slug',
-									'terms'    => $locationSelected,
-								),
-
-							)
-
-						);
-					} else {
-
-						// // Creating DateTime() objects from the input data.
-						// $dateTimeStart = new DateTime('2021-04-12 00:00:00');
-						// $dateTimeEnd   = new DateTime('2021-04-12 23:00:00');
-
-						// // Get all Bookings in Range
-						// $bookings = WC_Bookings_Controller::get_bookings_in_date_range(
-						// 		$dateTimeStart->getTimestamp(),
-						// 		$dateTimeEnd->getTimestamp(),
-						// 		'',
-						// 		false
-						// 	);
-						
-						// // Build Array of all the Booked Products for the given Date-Time interval.
-						// $exclude[] = 0;
-						// foreach ($bookings as $booking) {
-						// $exclude[] = $booking->product_id;
-						// }
-						//var_dump($exclude);
-						$args = array(
-							'post__not_in'  => $exclude,
-							'post_type' => 'product',
-							//'order' => 'ASC',
-							'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
-							'posts_per_page' => 12,
-							'paged' => $paged,
-							's' => $q,
-							'tax_query' => array(
-								
-								array(
-									'taxonomy' => 'type',
-									'field'    => 'slug',
-									'terms'    => 'tour',
-								),
-								
-
-							)
-
-
-						);
 					}
 
+					if ($categorySelected) {
+						$taxQuery =  array(
+							'relation' => 'AND',
+							array(
+								'taxonomy' => 'type',
+								'field'    => 'slug',
+								'terms'    => 'tour',
+							),
+							array(
+								'taxonomy' => 'product_cat',
+								'field'    => 'slug',
+								'terms'    => $categorySelected,
+							)
+						);
+
+						$args['tax_query'] = $taxQuery;
+							
+					
+					
+					} else {
+
+						$taxQuery =  array(
+							array(
+								'taxonomy' => 'type',
+								'field'    => 'slug',
+								'terms'    => 'tour',
+							),
+							
+						);
+
+						$args['tax_query'] = $taxQuery;
+						
+						
+					}
+					
 					$items = new WP_Query($args);
 					// Pagination fix
 					$temp_query = $wp_query;
