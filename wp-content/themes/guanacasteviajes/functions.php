@@ -170,6 +170,8 @@ function word_count($string, $limit) {
 function add_query_vars_filter($vars)
 {
 	$vars[] = "q";
+	$vars[] = "dateStart";
+	$vars[] = "dateEnd";
 	return $vars;
 }
 
