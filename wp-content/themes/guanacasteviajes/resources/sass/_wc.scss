@@ -277,3 +277,16 @@
 		background-color: #ecc94b !important;
 	}
 }
+
+.woocommerce ul.products.columns-3 li.product,
+	.woocommerce-page ul.products.columns-3 li.product {
+		width: 100%
+	}
+
+@media screen and (min-width:768px){
+		
+	.woocommerce ul.products.columns-3 li.product,
+	.woocommerce-page ul.products.columns-3 li.product {
+		width: 30.75%
+	}
+}
